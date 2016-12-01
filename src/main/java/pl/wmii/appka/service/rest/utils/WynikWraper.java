@@ -3,7 +3,7 @@ package pl.wmii.appka.service.rest.utils;
 import java.io.Serializable;
 import java.util.List;
 
-public class WynikWraper <T extends List<?> > implements Serializable {
+public class WynikWraper <T> implements Serializable {
 	
 	/**
 	 * 
@@ -11,17 +11,17 @@ public class WynikWraper <T extends List<?> > implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	
-	private T wyniki;
+	private List<T> wyniki;
 	
-	public WynikWraper(T wyniki) {
+	public WynikWraper(List<T> wyniki) {
 		this.setWyniki(wyniki);
 	}
 
-	public T getWyniki() {
+	public List<T> getWyniki() {
 		return wyniki;
 	}
 
-	public void setWyniki(T wyniki) {
+	public void setWyniki(List<T> wyniki) {
 		this.wyniki = wyniki;
 	}
 	

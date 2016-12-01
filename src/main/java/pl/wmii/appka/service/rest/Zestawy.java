@@ -9,6 +9,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.Status;
 
 import pl.wmii.appka.model.NapedDAO;
 import pl.wmii.appka.service.Dba;
@@ -23,19 +24,22 @@ public class Zestawy {
 	@Path("myszki")
 	public Response  podajMyszki() {
 		List<NapedDAO> napedy = new ArrayList<NapedDAO>();
-		//Dba db = new Dba();
+		Dba db = new Dba(true);
 		
 		StringBuilder sql = new StringBuilder();
 		
 		sql.append("SELECT * FROM Nagrywarka ");
 		
-//		db.openEm(true);
-//		myszki = db.getActiveEm().createNativeQuery(sql.toString()).getResultList();
-//		db.closeEm();
+		try {
+			napedy = db.getActiveEm().createNativeQuery(sql.toString()).getResultList();
+			db.sendToLogger("Jesteśmy w dupce");
+		} catch(Exception ex) {
+			return Response.status(Status.INTERNAL_SERVER_ERROR).entity("Jebło").build();
+		} finally {
+			db.closeEm();
+		}
 		
-		napedy.add(new NapedDAO(5, "", 5, "", ""));
-		
-		return Response.ok(new WynikWraper<List<NapedDAO>>(napedy)).build();
+		return Response.ok(new WynikWraper<NapedDAO>(napedy)).build();
 	}
 	
 	

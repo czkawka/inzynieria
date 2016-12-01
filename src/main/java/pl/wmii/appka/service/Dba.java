@@ -20,6 +20,8 @@ public class Dba {
 	/**
 	 * open Dba and also start a transaction
 	 */
+	
+	
 	public Dba() {
 		this(false);
 	}
@@ -33,6 +35,10 @@ public class Dba {
 
 		initialize();
 		openEm(readOnly);
+	}
+	
+	public void sendToLogger(String msg) {
+		logger.debug(msg);
 	}
 
 	public void openEm(boolean readOnly) {
