@@ -8,7 +8,7 @@ import javax.persistence.Id;
 
 
 @Entity
-public class MyszkaDAO implements Serializable{
+public class NapedDAO implements Serializable{
 
 	/**
 	 * 
@@ -26,10 +26,10 @@ public class MyszkaDAO implements Serializable{
 	private String cechyDodatkowe;
 	private String typPodzespolu;
 	
-	public MyszkaDAO() {
+	public NapedDAO() {
 	}
 	
-	public MyszkaDAO(int rodzaj, String producent, int urlMiniaturki,
+	public NapedDAO(int rodzaj, String producent, int urlMiniaturki,
 			String cechyDodatkowe, String typPozespolu) {
 		this.setRodzaj(rodzaj);
 		this.setProducent(producent);
