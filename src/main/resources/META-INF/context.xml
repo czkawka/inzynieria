@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Context>
-    <Resource name="jdbc/testDB" auth="Container" type="javax.sql.DataSource"
-            driverClassName="org.mysql.jdbcDriver" url="jdbc:mysql://orfi.uwm.edu.pl:3306/s129781"
-            username="s129781" password="waJ0Q5em63iQ" maxActive="20" maxIdle="10" maxWait="-1"
-            global="jdbc/testDB" />
-</Context>
