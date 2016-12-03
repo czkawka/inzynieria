@@ -1,2 +1,6 @@
 .classpath
 target/
+.idea/
+.project
+zestawy.iml
+.project
