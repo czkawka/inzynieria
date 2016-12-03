@@ -14,6 +14,7 @@ public class WynikWraper <T> implements Serializable {
 	private List<T> wyniki;
 	
 	public WynikWraper(List<T> wyniki) {
+		super();
 		this.setWyniki(wyniki);
 	}
 
