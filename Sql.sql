@@ -3,39 +3,39 @@ SET FOREIGN_KEY_CHECKS=0;
 
 
 DROP TABLE IF EXISTS ChlodzenieProcesora CASCADE
-go
+;
 DROP TABLE IF EXISTS DyskTwardy CASCADE
-go
+;
 DROP TABLE IF EXISTS KartaDzwiekowa CASCADE
-go
+;
 DROP TABLE IF EXISTS KartaGraficzna CASCADE
-go
+;
 DROP TABLE IF EXISTS KartaSieciowa CASCADE
-go
+;
 DROP TABLE IF EXISTS Klawiatura CASCADE
-go
+;
 DROP TABLE IF EXISTS Komputer CASCADE
-go
+;
 DROP TABLE IF EXISTS Monitor CASCADE
-go
+;
 DROP TABLE IF EXISTS Myszka CASCADE
-go
+;
 DROP TABLE IF EXISTS Nagrywarka CASCADE
-go
+;
 DROP TABLE IF EXISTS Obudowa CASCADE
-go
+;
 DROP TABLE IF EXISTS PamieciRam CASCADE
-go
+;
 DROP TABLE IF EXISTS PlytaGlowna CASCADE
-go
+;
 DROP TABLE IF EXISTS Procesor CASCADE
-go
+;
 DROP TABLE IF EXISTS Uzytkownik CASCADE
-go
+;
 DROP TABLE IF EXISTS Zasilacz CASCADE
-go
+;
 DROP TABLE IF EXISTS ZestawKomputerowy CASCADE
-go
+;
 
 CREATE TABLE ChlodzenieProcesora
 (
@@ -50,7 +50,7 @@ CREATE TABLE ChlodzenieProcesora
 	PRIMARY KEY (chlodzenieID)
 
 ) 
-go
+;
 
 
 CREATE TABLE DyskTwardy
@@ -69,7 +69,7 @@ CREATE TABLE DyskTwardy
 	PRIMARY KEY (dyskTwardyID)
 
 ) 
-go
+;
 
 
 CREATE TABLE KartaDzwiekowa
@@ -86,7 +86,7 @@ CREATE TABLE KartaDzwiekowa
 	PRIMARY KEY (kartaDzwiekowaID)
 
 ) 
-go
+;
 
 
 CREATE TABLE KartaGraficzna
@@ -108,7 +108,7 @@ CREATE TABLE KartaGraficzna
 	PRIMARY KEY (kartaGraficznaID)
 
 ) 
-go
+;
 
 
 CREATE TABLE KartaSieciowa
@@ -126,7 +126,7 @@ CREATE TABLE KartaSieciowa
 	PRIMARY KEY (kartaSieciowaID)
 
 ) 
-go
+;
 
 
 CREATE TABLE Klawiatura
@@ -141,7 +141,7 @@ CREATE TABLE Klawiatura
 	PRIMARY KEY (idKlawiatury)
 
 ) 
-go
+;
 
 
 CREATE TABLE Komputer
@@ -172,7 +172,7 @@ CREATE TABLE Komputer
 	KEY (zasilacz)
 
 ) 
-go
+;
 
 
 CREATE TABLE Monitor
@@ -194,7 +194,7 @@ CREATE TABLE Monitor
 	PRIMARY KEY (idMonitora)
 
 ) 
-go
+;
 
 
 CREATE TABLE Myszka
@@ -210,7 +210,7 @@ CREATE TABLE Myszka
 	PRIMARY KEY (IdMyszki)
 
 ) 
-go
+;
 
 
 CREATE TABLE Nagrywarka
@@ -224,7 +224,7 @@ CREATE TABLE Nagrywarka
 	PRIMARY KEY (nagrywarkaID)
 
 ) 
-go
+;
 
 
 CREATE TABLE Obudowa
@@ -246,7 +246,7 @@ CREATE TABLE Obudowa
 	PRIMARY KEY (obudowaID)
 
 ) 
-go
+;
 
 
 CREATE TABLE PamieciRam
@@ -264,7 +264,7 @@ CREATE TABLE PamieciRam
 	PRIMARY KEY (pamieciRamID)
 
 ) 
-go
+;
 
 
 CREATE TABLE PlytaGlowna
@@ -295,7 +295,7 @@ CREATE TABLE PlytaGlowna
 	PRIMARY KEY (plytaGlownaID)
 
 ) 
-go
+;
 
 
 CREATE TABLE Procesor
@@ -320,7 +320,7 @@ CREATE TABLE Procesor
 	PRIMARY KEY (procesorID)
 
 ) 
-go
+;
 
 
 CREATE TABLE Uzytkownik
@@ -332,7 +332,7 @@ CREATE TABLE Uzytkownik
 	PRIMARY KEY (idUzytkownika)
 
 ) 
-go
+;
 
 
 CREATE TABLE Zasilacz
@@ -347,7 +347,7 @@ CREATE TABLE Zasilacz
 	PRIMARY KEY (zasilaczID)
 
 ) 
-go
+;
 
 
 CREATE TABLE ZestawKomputerowy
@@ -366,7 +366,7 @@ CREATE TABLE ZestawKomputerowy
 	KEY (uzytkownik)
 
 ) 
-go
+;
 
 
 
@@ -375,64 +375,64 @@ SET FOREIGN_KEY_CHECKS=1;
 
 ALTER TABLE Komputer ADD CONSTRAINT FK_Komputer_ChlodzenieProcesora 
 	FOREIGN KEY (chlodzenieProcesora) REFERENCES ChlodzenieProcesora (chlodzenieID)
-go
+;
 
 ALTER TABLE Komputer ADD CONSTRAINT FK_Komputer_DyskTwardy 
 	FOREIGN KEY (dyskiTwarde) REFERENCES DyskTwardy (dyskTwardyID)
-go
+;
 
 ALTER TABLE Komputer ADD CONSTRAINT FK_Komputer_KartaDzwiekowa 
 	FOREIGN KEY (kartaDzwiekowa) REFERENCES KartaDzwiekowa (kartaDzwiekowaID)
-go
+;
 
 ALTER TABLE Komputer ADD CONSTRAINT FK_Komputer_KartaGraficzna 
 	FOREIGN KEY (kartaGraficzna) REFERENCES KartaGraficzna (kartaGraficznaID)
-go
+;
 
 ALTER TABLE Komputer ADD CONSTRAINT FK_Komputer_KartaSieciowa 
 	FOREIGN KEY (kartaSieciowa) REFERENCES KartaSieciowa (kartaSieciowaID)
-go
+;
 
 ALTER TABLE Komputer ADD CONSTRAINT FK_Komputer_Nagrywarka 
 	FOREIGN KEY (nagrywarka) REFERENCES Nagrywarka (nagrywarkaID)
-go
+;
 
 ALTER TABLE Komputer ADD CONSTRAINT FK_Komputer_Obudowa 
 	FOREIGN KEY (obudowa) REFERENCES Obudowa (obudowaID)
-go
+;
 
 ALTER TABLE Komputer ADD CONSTRAINT FK_Komputer_PamieciRam 
 	FOREIGN KEY (ram) REFERENCES PamieciRam (pamieciRamID)
-go
+;
 
 ALTER TABLE Komputer ADD CONSTRAINT FK_Komputer_PlytaGlowna 
 	FOREIGN KEY (plytaGl) REFERENCES PlytaGlowna (plytaGlownaID)
-go
+;
 
 ALTER TABLE Komputer ADD CONSTRAINT FK_Komputer_Procesor 
 	FOREIGN KEY (procesor) REFERENCES Procesor (procesorID)
-go
+;
 
 ALTER TABLE Komputer ADD CONSTRAINT FK_Komputer_Zasilacz 
 	FOREIGN KEY (zasilacz) REFERENCES Zasilacz (zasilaczID)
-go
+;
 
 ALTER TABLE ZestawKomputerowy ADD CONSTRAINT FK_ZestawKomputerowy_Klawiatura 
 	FOREIGN KEY (Klawiatura) REFERENCES Klawiatura (idKlawiatury)
-go
+;
 
 ALTER TABLE ZestawKomputerowy ADD CONSTRAINT FK_ZestawKomputerowy_Komputer 
 	FOREIGN KEY (Komputer) REFERENCES Komputer (id)
-go
+;
 
 ALTER TABLE ZestawKomputerowy ADD CONSTRAINT FK_ZestawKomputerowy_Monitor 
 	FOREIGN KEY (Monitor) REFERENCES Monitor (idMonitora)
-go
+;
 
 ALTER TABLE ZestawKomputerowy ADD CONSTRAINT FK_ZestawKomputerowy_Myszka 
 	FOREIGN KEY (Myszka) REFERENCES Myszka (IdMyszki)
-go
+;
 
 ALTER TABLE ZestawKomputerowy ADD CONSTRAINT FK_ZestawKomputerowy_Uzytkownik 
 	FOREIGN KEY (uzytkownik) REFERENCES Uzytkownik (idUzytkownika)
-go
+;
