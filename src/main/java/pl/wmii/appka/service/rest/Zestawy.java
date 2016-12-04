@@ -15,16 +15,22 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import pl.wmii.appka.model.User;
 import pl.wmii.appka.model.dto.UserDTO;
-import pl.wmii.appka.service.rest.utils.WynikWraper;
+import pl.wmii.appka.service.utils.WynikWraper;
 
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @Path("zestawy")
 public class Zestawy {
 
+	// Wprowadza możliwość wyprowadzania logów na terminalu serwera
+	private static final Logger LOGGER = LoggerFactory.getLogger(Zestawy.class);
+
 	private static EntityManagerFactory emf;
+
 	private EntityManager em;
 	
 	@GET

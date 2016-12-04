@@ -3,9 +3,12 @@
 	version="2.0">
 
 	<persistence-unit name="testJPA" transaction-type="RESOURCE_LOCAL">
-		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<!-- Classes -->
 		<class>pl.wmii.appka.model.User</class>
+		<class>pl.wmii.appka.model.entity.UzytkownikDAO</class>
+		<class>pl.wmii.appka.model.entity.KomputerDAO</class>
+		<class>pl.wmii.appka.model.entity.ZestawKomputerowyDAO</class>
+		<!-- Classes -->
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 			<property name="javax.persistence.jdbc.url"

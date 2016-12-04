@@ -31,11 +31,7 @@ public class User {
 		dto.setId(getIdUser());
 		return dto; 
 	}
-	
-	@Override
-	public String toString() {
-		return getLogin() + getHaslo() + getIdUser();
-	}
+
 
 	public String getLogin() {
 		return login;

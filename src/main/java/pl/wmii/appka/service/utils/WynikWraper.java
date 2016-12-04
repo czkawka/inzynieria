@@ -1,4 +1,4 @@
-package pl.wmii.appka.service.rest.utils;
+package pl.wmii.appka.service.utils;
 
 import java.io.Serializable;
 import java.util.List;
@@ -12,6 +12,7 @@ public class WynikWraper <T> implements Serializable {
 	
 	
 	private List<T> wyniki;
+	private int ilosc;
 	
 	public WynikWraper(List<T> wyniki) {
 		super();
@@ -25,5 +26,12 @@ public class WynikWraper <T> implements Serializable {
 	public void setWyniki(List<T> wyniki) {
 		this.wyniki = wyniki;
 	}
-	
+
+	public int getIlosc() {
+		return ilosc;
+	}
+
+	public void setIlosc(int ilosc) {
+		this.ilosc = ilosc;
+	}
 }
