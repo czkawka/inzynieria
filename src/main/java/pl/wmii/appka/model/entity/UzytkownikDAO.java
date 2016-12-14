@@ -1,5 +1,7 @@
 package pl.wmii.appka.model.entity;
 
+import pl.wmii.appka.model.dto.UzytkownikDTO;
+
 import javax.persistence.*;
 
 /**
@@ -11,6 +13,10 @@ import javax.persistence.*;
 public class UzytkownikDAO {
 
   @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @Column(name = "idUzytkownika")
+  private int idUzytkownika;
+
   @Column(name = "login")
   private String login;
 
@@ -42,5 +48,16 @@ public class UzytkownikDAO {
 
   public void setNazwisko(String nazwisko) {
     this.nazwisko = nazwisko;
+  }
+
+  public int getIdUzytkownika() { return idUzytkownika; }
+
+  public UzytkownikDTO podajDTO() {
+    UzytkownikDTO dto = new UzytkownikDTO();
+    dto.setIdUzytkownika(idUzytkownika);
+    dto.setImiona(imiona);
+    dto.setLogin(login);
+    dto.setNazwisko(nazwisko);
+    return dto;
   }
 }

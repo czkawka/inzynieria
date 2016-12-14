@@ -3,7 +3,7 @@ package pl.wmii.appka.service.utils;
 import java.io.Serializable;
 import java.util.List;
 
-public class WynikWraper <T> implements Serializable {
+public class WynikWraper <T extends  BaseDTO > implements Serializable {
 	
 	/**
 	 * 
