@@ -1,25 +1,22 @@
 package pl.wmii.appka.model.dto;
 
-import pl.wmii.appka.service.utils.BaseDTO;
-
-
 
 /**
  * Created by Damian on 05.12.2016.
  */
 public class UzytkownikDTO extends BaseDTO {
 
-  private int idUzytkownika;
+  private Long idUzytkownika;
   private String login;
   private String imiona;
   private String nazwisko;
 
 
-  public int getIdUzytkownika() {
+  public Long getIdUzytkownika() {
     return idUzytkownika;
   }
 
-  public void setIdUzytkownika(int idUzytkownika) {
+  public void setIdUzytkownika(Long idUzytkownika) {
     this.idUzytkownika = idUzytkownika;
   }
 

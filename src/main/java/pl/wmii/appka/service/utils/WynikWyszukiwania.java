@@ -1,9 +1,11 @@
 package pl.wmii.appka.service.utils;
 
+import pl.wmii.appka.model.dto.BaseDTO;
+
 import java.io.Serializable;
 import java.util.List;
 
-public class WynikWraper <T extends  BaseDTO > implements Serializable {
+public class WynikWyszukiwania<T extends BaseDTO> implements Serializable {
 	
 	/**
 	 * 
@@ -14,7 +16,7 @@ public class WynikWraper <T extends  BaseDTO > implements Serializable {
 	private List<T> wyniki;
 	private int ilosc;
 	
-	public WynikWraper(List<T> wyniki) {
+	public WynikWyszukiwania(List<T> wyniki) {
 		super();
 		this.setWyniki(wyniki);
 	}

@@ -4,6 +4,11 @@
 	id="WebApp_ID" version="3.1">
  
 	<display-name>Zestawy</display-name>
+
+	<listener>
+		<listener-class>pl.wmii.appka.service.EntityManagerListner</listener-class>
+	</listener>
+
 	<servlet>
 		<servlet-name>Zestawy</servlet-name>
 		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>

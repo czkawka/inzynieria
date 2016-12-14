@@ -9,13 +9,13 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name = "konfigurator.uzytkownik")
+@Table(name = "uzytkownik", schema = "konfigurator")
 public class UzytkownikDAO {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  @Column(name = "idUzytkownika")
-  private int idUzytkownika;
+  @Column(name = "id")
+  private Long id;
 
   @Column(name = "login")
   private String login;
@@ -50,14 +50,15 @@ public class UzytkownikDAO {
     this.nazwisko = nazwisko;
   }
 
-  public int getIdUzytkownika() { return idUzytkownika; }
+  public Long geId() { return id; }
 
   public UzytkownikDTO podajDTO() {
     UzytkownikDTO dto = new UzytkownikDTO();
-    dto.setIdUzytkownika(idUzytkownika);
+    dto.setIdUzytkownika(id);
     dto.setImiona(imiona);
     dto.setLogin(login);
     dto.setNazwisko(nazwisko);
     return dto;
   }
+
 }

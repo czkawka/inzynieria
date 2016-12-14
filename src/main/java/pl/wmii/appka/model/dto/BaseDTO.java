@@ -1,4 +1,4 @@
-package pl.wmii.appka.service.utils;
+package pl.wmii.appka.model.dto;
 
 import java.io.Serializable;
 
