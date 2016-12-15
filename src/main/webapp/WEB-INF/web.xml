@@ -6,7 +6,7 @@
 	<display-name>Zestawy</display-name>
 
 	<listener>
-		<listener-class>pl.wmii.appka.service.EntityManagerListner</listener-class>
+		<listener-class>pl.wmii.appka.service.HybernateSessionFactory</listener-class>
 	</listener>
 
 	<servlet>

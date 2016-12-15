@@ -8,7 +8,7 @@ import javax.servlet.ServletContextListener;
  *
  * Klasa ta wraz z deployem uruchamia validacje bazy danych z hybernate.cfg.xml
  */
-public class EntityManagerListner implements ServletContextListener {
+public class HybernateSessionFactory implements ServletContextListener {
 
   @Override
   public void contextInitialized(ServletContextEvent servletContextEvent) {
