@@ -18,17 +18,17 @@
         <property name="c3p0.timeout">1800</property>
 
         <!-- Disable second-level cache. -->
-<!--        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
         <property name="cache.use_query_cache">false</property>
         <property name="cache.use_minimal_puts">false</property>
-        <property name="max_fetch_depth">3</property>-->
+        <property name="max_fetch_depth">3</property>
 
         <!-- Print SQL to stdout. -->
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
 
         <!-- Drop and then re-create schema on SessionFactory build, for testing. -->
-        <property name="hbm2ddl.auto">update</property>
+        <property name="hbm2ddl.auto">create</property>
 
         <!-- Bind the getCurrentSession() method to the thread. -->
         <property name="current_session_context_class">thread</property>
@@ -40,6 +40,7 @@
         <mapping package="org.mypackage"/>
         -->
         <mapping class="pl.wmii.appka.model.entity.UzytkownikDAO"/>
+        <mapping class="pl.wmii.appka.model.entity.peryferia.MyszkaDAO"/>
 
     </session-factory>
 

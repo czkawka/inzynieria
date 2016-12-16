@@ -7,6 +7,7 @@
 
 		<!-- Classes -->
 		<class>pl.wmii.appka.model.entity.UzytkownikDAO</class>
+		<class>pl.wmii.appka.model.entity.peryferia.MyszkaDAO</class>
 		<!-- Classes -->
 
 		<properties>

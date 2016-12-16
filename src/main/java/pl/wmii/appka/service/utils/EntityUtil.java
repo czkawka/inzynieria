@@ -45,7 +45,7 @@ public class EntityUtil {
   }
 
 
-  public EntityManager getEm() {
+  public EntityManager getEntityManager() {
     return em;
   }
 

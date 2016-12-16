@@ -1,4 +1,6 @@
-package pl.wmii.appka.service;
+package pl.wmii.appka.service.utils;
+
+import pl.wmii.appka.service.utils.HybernateUtils;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
