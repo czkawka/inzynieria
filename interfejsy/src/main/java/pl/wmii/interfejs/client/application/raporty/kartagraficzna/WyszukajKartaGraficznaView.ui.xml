@@ -1,0 +1,62 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:b="urn:import:org.gwtbootstrap3.client.ui">
+	<ui:style>
+
+	</ui:style>
+	<g:HTMLPanel>
+		<b:Container fluid="true">
+			<b:Row>
+				<b:Form>
+					<b:Row>
+						<b:Column size="MD_4">
+							<b:FormGroup>
+								<b:FormLabel for="producent">Producent</b:FormLabel>
+								<b:Input type="PASSWORD" b:id="producent" />
+							</b:FormGroup>
+
+							<b:FormGroup>
+								<b:FormLabel for="rodzajPamieci">Rodzaj Pamieci</b:FormLabel>
+								<b:ListBox b:id="rodzajPamieci" ui:field="rodzajPamieci">
+									<g:item>DDR3</g:item>
+									<g:item>DDR4</g:item>
+									<g:item>DDR5</g:item>
+								</b:ListBox>
+							</b:FormGroup>
+						</b:Column>
+						<b:Column size="MD_4">
+							<b:FormGroup>
+								<b:FormLabel for="nazwa">Nazwa</b:FormLabel>
+								<b:Input type="PASSWORD" b:id="nazwa" />
+							</b:FormGroup>
+
+							<b:FormGroup>
+								<b:FormLabel for="rodzajPamieci">Zlacza zewnetrzne</b:FormLabel>
+								<b:ListBox b:id="zlaczeZew" ui:field="zlaczeZew" multipleSelect="true">
+									<g:item>DVI</g:item>
+									<g:item>HDMI</g:item>
+									<g:item>VGA</g:item>
+									<g:item>D-SUB</g:item>
+								</b:ListBox>
+							</b:FormGroup>
+						</b:Column>
+						<b:Column size="MD_4">
+							<b:FormGroup>
+								<b:FormLabel for="DD">Ilość pamieci(MB)</b:FormLabel>
+								<b:Input type="NUMBER" b:id="DD" />
+							</b:FormGroup>
+						</b:Column>
+					</b:Row>
+
+					<b:Button>Wyszukaj</b:Button>
+				</b:Form>
+			</b:Row>
+			<b:Row>
+				<b:Column size="MD_12">
+					<c:CellTable ui:field="tabelka" width="100%" />
+				</b:Column>
+			</b:Row>
+		</b:Container>
+	</g:HTMLPanel>
+</ui:UiBinder> 

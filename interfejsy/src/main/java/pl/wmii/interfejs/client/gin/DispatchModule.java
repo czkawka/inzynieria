@@ -12,7 +12,7 @@ public class DispatchModule extends AbstractGinModule {
 				new RestDispatchAsyncModule.Builder();
 		install(dispatchBuilder.build()	);
 
-		bindConstant().annotatedWith(RestApplicationPath.class).to("http://server/apiadress");
+		bindConstant().annotatedWith(RestApplicationPath.class).to("http://localhost:8080/inzynieria/api");
 	}
 
 }

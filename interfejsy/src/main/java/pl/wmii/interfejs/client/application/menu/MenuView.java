@@ -28,6 +28,8 @@ public class MenuView extends ViewWithUiHandlers<MenuUiHandlers> implements Menu
     initMenu();
     initWidget(uiBinder.createAndBindUi(this));
   }
+  
+  SingleSelectionModel<ElementMenu> singleSelectionModel;
 
   @UiField(provided = true)
   CellList<ElementMenu> menuList;
@@ -36,7 +38,7 @@ public class MenuView extends ViewWithUiHandlers<MenuUiHandlers> implements Menu
 
   protected void initMenu() {
     MenuCell cell = new MenuCell();
-    final SingleSelectionModel<ElementMenu> singleSelectionModel = new SingleSelectionModel<ElementMenu>();
+    singleSelectionModel = new SingleSelectionModel<ElementMenu>();
     singleSelectionModel.addSelectionChangeHandler(new SelectionChangeEvent.Handler() {
       @Override
       public void onSelectionChange(SelectionChangeEvent selectionChangeEvent) {
@@ -49,6 +51,14 @@ public class MenuView extends ViewWithUiHandlers<MenuUiHandlers> implements Menu
     menuList.setWidth("100%");
 
   }
+
+
+
+@Override
+public SingleSelectionModel<ElementMenu> podajSelectionModel() {
+	// TODO Auto-generated method stub
+	return singleSelectionModel;
+}
 
 
 }

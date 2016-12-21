@@ -7,39 +7,42 @@
 		}
 	</ui:style>
 	<g:HTMLPanel>
-		<b:Form type="HORIZONTAL">
-		    
+		<b:Form type="HORIZONTAL" ui:field="form">
+
 			<b:Legend>Dodaj Karte graficzną</b:Legend>
 
-			<b:FormGroup>
+			<b:FormGroup ui:field="rodzinaGroup">
 				<b:FormLabel for="rodzinaProduktu" addStyleNames="col-lg-2">Rodzina
 					produktu:
 				</b:FormLabel>
 				<g:FlowPanel addStyleNames="col-lg-10">
-					<b:TextBox b:id="rodzinaProduktu" placeholder="Wprowadź rodzinę produktu" />
+					<b:Input type="TEXT" b:id="rodzinaProduktu" ui:field="rodzinaProduktu"
+						placeholder="Wprowadź rodzinę produktu" />
 				</g:FlowPanel>
 			</b:FormGroup>
 
-			<b:FormGroup>
+			<b:FormGroup ui:field="nazwaGroup">
 				<b:FormLabel for="nazwa" addStyleNames="col-lg-2">Nazwa</b:FormLabel>
 				<g:FlowPanel addStyleNames="col-lg-10">
-					<b:TextBox b:id="nazwa" placeholder="Wprowadź nzazwę karty" />
+					<b:Input type="TEXT" b:id="nazwa" ui:field="nazwa"
+						placeholder="Wprowadź nzazwę karty" />
 				</g:FlowPanel>
 			</b:FormGroup>
 
-			<b:FormGroup>
+			<b:FormGroup ui:field="taktowanieRdzeniaGroup">
 				<b:FormLabel for="taktowanieRdzenia" addStyleNames="col-lg-2">Taktowanie
 					Rdzenia</b:FormLabel>
 				<g:FlowPanel addStyleNames="col-lg-10">
-					<b:TextBox b:id="taktowanieRdzenia" placeholder="Wprowadz taktowanie rdzenia" />
+					<b:Input type="NUMBER" b:id="taktowanieRdzenia" ui:field="taktowanieRdzenia"
+						placeholder="Wprowadz taktowanie rdzenia" />
 				</g:FlowPanel>
 			</b:FormGroup>
 
-			<b:FormGroup>
+			<b:FormGroup ui:field="rodzajPamieciGroup">
 				<b:FormLabel for="rodzajPamieci" addStyleNames="col-lg-2">Rodzaj
 					pamieci</b:FormLabel>
 				<g:FlowPanel addStyleNames="col-lg-10">
-					<b:ListBox b:id="rodzajPamieci">
+					<b:ListBox b:id="rodzajPamieci" ui:field="rodzajPamieci">
 						<g:item>DDR3</g:item>
 						<g:item>DDR4</g:item>
 						<g:item>DDR5</g:item>
@@ -47,30 +50,33 @@
 				</g:FlowPanel>
 			</b:FormGroup>
 
-			<b:FormGroup>
+			<b:FormGroup ui:field="taktowaniePamieciGroup">
 				<b:FormLabel for="taktowaniePamieci" addStyleNames="col-lg-2">Taktowanie
 					pamieci</b:FormLabel>
 				<g:FlowPanel addStyleNames="col-lg-10">
-					<b:TextBox b:id="taktowaniePamieci" placeholder="Wprowadź taktowanie pamieci" />
+					<b:Input type="NUMBER" b:id="taktowaniePamieci" ui:field="taktowaniePamieci"
+						placeholder="Wprowadź taktowanie pamieci" />
 				</g:FlowPanel>
 			</b:FormGroup>
 
-			<b:FormGroup>
-				<b:FormLabel for="szynaPamieci" addStyleNames="col-lg-2">Taktowanie
-					pamieci</b:FormLabel>
+			<b:FormGroup ui:field="szynaGroup">
+				<b:FormLabel for="szynaPamieci" addStyleNames="col-lg-2">Szyna
+					pamięci</b:FormLabel>
 				<g:FlowPanel addStyleNames="col-lg-10">
-					<b:TextBox b:id="szynaPamieci" placeholder="Wprowadź szynę pamieci" />
+					<b:Input type="NUMBER" b:id="szynaPamieci" ui:field="szynaPamieci"
+						placeholder="Wprowadź szynę pamieci" />
 				</g:FlowPanel>
 			</b:FormGroup>
 
-			<b:FormGroup>
+			<b:FormGroup ui:field="maxResGroup">
 				<b:FormLabel for="maxRes" addStyleNames="col-lg-2">Max. rozdzielość</b:FormLabel>
 				<g:FlowPanel addStyleNames="col-lg-10">
-					<b:TextBox b:id="maxRes" placeholder="Wprowadź maksymalną rozdzielczość" />
+					<b:Input type="TEXT" b:id="maxRes" ui:field="maxRes"
+						placeholder="Wprowadź maksymalną rozdzielczość" />
 				</g:FlowPanel>
 			</b:FormGroup>
 
-			<b:FormGroup>
+			<b:FormGroup ui:field="zlaczeGroup">
 				<b:FormLabel for="zlacze" addStyleNames="col-lg-2">Złącze</b:FormLabel>
 				<g:FlowPanel addStyleNames="col-lg-10">
 					<b:ListBox b:id="zlacze">
@@ -80,11 +86,12 @@
 				</g:FlowPanel>
 			</b:FormGroup>
 
-			<b:FormGroup>
+			<b:FormGroup ui:field="zlaczeZewGroup">
 				<b:FormLabel for="zlaczeZew" addStyleNames="col-lg-2">Złącze
 					zewnętrzne</b:FormLabel>
 				<g:FlowPanel addStyleNames="col-lg-10">
-					<b:ListBox b:id="zlaczeZew" multipleSelect="true">
+					<b:ListBox b:id="zlaczeZew" ui:field="zlaczeZew"
+						multipleSelect="true">
 						<g:item>DVI</g:item>
 						<g:item>HDMI</g:item>
 						<g:item>VGA</g:item>
@@ -93,21 +100,23 @@
 				</g:FlowPanel>
 			</b:FormGroup>
 
-			<b:FormGroup>
+			<b:FormGroup ui:field="producentGroup">
 				<b:FormLabel for="producent" addStyleNames="col-lg-2">Producent</b:FormLabel>
 				<g:FlowPanel addStyleNames="col-lg-10">
-					<b:TextBox b:id="producent" placeholder="Wprowadź producenta" />
+					<b:Input type="TEXT" b:id="producent" ui:field="producent"
+						placeholder="Wprowadź producenta" />
 				</g:FlowPanel>
 			</b:FormGroup>
 
-			<b:FormGroup>
+			<b:FormGroup ui:field="dodatkiGroup">
 				<b:FormLabel for="dodatki" addStyleNames="col-lg-2">Cechy dodatkowe</b:FormLabel>
 				<g:FlowPanel addStyleNames="col-lg-10">
-					<b:TextArea b:id="dodatki" placeholder="Wprowadź opis" />
+					<b:TextArea b:id="dodatki" ui:field="dodatki"
+						placeholder="Wprowadź opis" />
 				</g:FlowPanel>
 			</b:FormGroup>
-			
-			<b:Button>Zapisz</b:Button>
+
+			<b:Button ui:field="zapiszButton">Zapisz</b:Button>
 		</b:Form>
 	</g:HTMLPanel>
 </ui:UiBinder> 

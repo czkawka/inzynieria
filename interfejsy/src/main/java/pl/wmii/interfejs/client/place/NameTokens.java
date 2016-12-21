@@ -18,6 +18,11 @@ public class NameTokens {
 	public static final String DODAJ_KARTA_GRAFICZNA ="dodajKarteGraficzna";
 	public static final String REGISTER = "zarejestruj";
 	public static final String DODAJ_ZESTAW = "dodajzestaw";
+	
+	/*
+	 * RAPORTY
+	 */
+	public static final String WYSZUKAJ_KARTY_GRAFICZNE ="wyszukajgrafiki";
 
 
 }
