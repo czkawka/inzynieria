@@ -1,0 +1,29 @@
+@CHARSET "UTF-8";
+
+.menuCell>.icon {
+    margin-right: 10px;
+   float: left;
+}
+    
+.menuCell i {
+  font-size: 25px;
+}
+
+.menuCell {
+    padding: 5px; 
+}
+
+.menuCell {
+      margin-bottom: 15px;  
+}
+
+.com-google-gwt-user-cellview-client-CellList-Style-cellListKeyboardSelectedItem {
+    background-image: none !important; 
+    background-color: #a7a7a7 !important;
+}
+
+.clearfix::after {
+	clear: both;
+	content: '';
+	display: block;
+}

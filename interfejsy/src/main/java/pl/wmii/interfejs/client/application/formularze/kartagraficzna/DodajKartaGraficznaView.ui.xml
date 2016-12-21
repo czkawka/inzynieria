@@ -1,0 +1,113 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:org.gwtbootstrap3.client.ui">
+	<ui:style>
+		.important {
+		font-weight: bold;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<b:Form type="HORIZONTAL">
+		    
+			<b:Legend>Dodaj Karte graficzną</b:Legend>
+
+			<b:FormGroup>
+				<b:FormLabel for="rodzinaProduktu" addStyleNames="col-lg-2">Rodzina
+					produktu:
+				</b:FormLabel>
+				<g:FlowPanel addStyleNames="col-lg-10">
+					<b:TextBox b:id="rodzinaProduktu" placeholder="Wprowadź rodzinę produktu" />
+				</g:FlowPanel>
+			</b:FormGroup>
+
+			<b:FormGroup>
+				<b:FormLabel for="nazwa" addStyleNames="col-lg-2">Nazwa</b:FormLabel>
+				<g:FlowPanel addStyleNames="col-lg-10">
+					<b:TextBox b:id="nazwa" placeholder="Wprowadź nzazwę karty" />
+				</g:FlowPanel>
+			</b:FormGroup>
+
+			<b:FormGroup>
+				<b:FormLabel for="taktowanieRdzenia" addStyleNames="col-lg-2">Taktowanie
+					Rdzenia</b:FormLabel>
+				<g:FlowPanel addStyleNames="col-lg-10">
+					<b:TextBox b:id="taktowanieRdzenia" placeholder="Wprowadz taktowanie rdzenia" />
+				</g:FlowPanel>
+			</b:FormGroup>
+
+			<b:FormGroup>
+				<b:FormLabel for="rodzajPamieci" addStyleNames="col-lg-2">Rodzaj
+					pamieci</b:FormLabel>
+				<g:FlowPanel addStyleNames="col-lg-10">
+					<b:ListBox b:id="rodzajPamieci">
+						<g:item>DDR3</g:item>
+						<g:item>DDR4</g:item>
+						<g:item>DDR5</g:item>
+					</b:ListBox>
+				</g:FlowPanel>
+			</b:FormGroup>
+
+			<b:FormGroup>
+				<b:FormLabel for="taktowaniePamieci" addStyleNames="col-lg-2">Taktowanie
+					pamieci</b:FormLabel>
+				<g:FlowPanel addStyleNames="col-lg-10">
+					<b:TextBox b:id="taktowaniePamieci" placeholder="Wprowadź taktowanie pamieci" />
+				</g:FlowPanel>
+			</b:FormGroup>
+
+			<b:FormGroup>
+				<b:FormLabel for="szynaPamieci" addStyleNames="col-lg-2">Taktowanie
+					pamieci</b:FormLabel>
+				<g:FlowPanel addStyleNames="col-lg-10">
+					<b:TextBox b:id="szynaPamieci" placeholder="Wprowadź szynę pamieci" />
+				</g:FlowPanel>
+			</b:FormGroup>
+
+			<b:FormGroup>
+				<b:FormLabel for="maxRes" addStyleNames="col-lg-2">Max. rozdzielość</b:FormLabel>
+				<g:FlowPanel addStyleNames="col-lg-10">
+					<b:TextBox b:id="maxRes" placeholder="Wprowadź maksymalną rozdzielczość" />
+				</g:FlowPanel>
+			</b:FormGroup>
+
+			<b:FormGroup>
+				<b:FormLabel for="zlacze" addStyleNames="col-lg-2">Złącze</b:FormLabel>
+				<g:FlowPanel addStyleNames="col-lg-10">
+					<b:ListBox b:id="zlacze">
+						<g:item>PCI Express x8</g:item>
+						<g:item>PCI Express x16</g:item>
+					</b:ListBox>
+				</g:FlowPanel>
+			</b:FormGroup>
+
+			<b:FormGroup>
+				<b:FormLabel for="zlaczeZew" addStyleNames="col-lg-2">Złącze
+					zewnętrzne</b:FormLabel>
+				<g:FlowPanel addStyleNames="col-lg-10">
+					<b:ListBox b:id="zlaczeZew" multipleSelect="true">
+						<g:item>DVI</g:item>
+						<g:item>HDMI</g:item>
+						<g:item>VGA</g:item>
+						<g:item>D-SUB</g:item>
+					</b:ListBox>
+				</g:FlowPanel>
+			</b:FormGroup>
+
+			<b:FormGroup>
+				<b:FormLabel for="producent" addStyleNames="col-lg-2">Producent</b:FormLabel>
+				<g:FlowPanel addStyleNames="col-lg-10">
+					<b:TextBox b:id="producent" placeholder="Wprowadź producenta" />
+				</g:FlowPanel>
+			</b:FormGroup>
+
+			<b:FormGroup>
+				<b:FormLabel for="dodatki" addStyleNames="col-lg-2">Cechy dodatkowe</b:FormLabel>
+				<g:FlowPanel addStyleNames="col-lg-10">
+					<b:TextArea b:id="dodatki" placeholder="Wprowadź opis" />
+				</g:FlowPanel>
+			</b:FormGroup>
+			
+			<b:Button>Zapisz</b:Button>
+		</b:Form>
+	</g:HTMLPanel>
+</ui:UiBinder> 

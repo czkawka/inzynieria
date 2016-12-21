@@ -1,0 +1,52 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:org.gwtbootstrap3.client.ui">
+	<ui:style>
+		.important {
+		font-weight: bold;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<b:Form>
+			<b:Form>
+				<b:FieldSet>
+					<b:Legend>Sample form</b:Legend>
+
+					<b:FormGroup>
+						<b:FormLabel for="formEmail">Email</b:FormLabel>
+						<b:FormControlStatic b:id="formEmail">email@example.example</b:FormControlStatic>
+					</b:FormGroup>
+
+					<b:FormGroup>
+						<b:FormLabel for="formPassword">Password</b:FormLabel>
+						<b:Input type="PASSWORD" b:id="formPassword" />
+					</b:FormGroup>
+
+					<b:FormGroup>
+						<b:FormLabel for="formName">Name</b:FormLabel>
+						<b:TextBox placeholder="blabla" b:id="formName" />
+					</b:FormGroup>
+
+					<b:FormGroup validationState="WARNING">
+						<b:FormLabel for="formWarning">Input with warning</b:FormLabel>
+						<b:TextBox b:id="formWarning" />
+						<b:HelpBlock text="" />
+					</b:FormGroup>
+
+					<b:FormGroup validationState="ERROR">
+						<b:FormLabel for="formError">Input with error</b:FormLabel>
+						<b:TextBox b:id="formError" />
+					</b:FormGroup>
+
+					<b:FormGroup validationState="SUCCESS">
+						<b:FormLabel for="formSuccess">Input with success</b:FormLabel>
+						<b:TextBox b:id="formSuccess" />
+					</b:FormGroup>
+
+					<b:Button>Send</b:Button>
+				</b:FieldSet>
+			</b:Form>
+		</b:Form>
+	</g:HTMLPanel>
+</ui:UiBinder> 
