@@ -3,16 +3,30 @@
 	version="2.0">
 
 	<persistence-unit name="testJPA" transaction-type="RESOURCE_LOCAL">
-		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
 		<!-- Classes -->
-		<class>pl.wmii.appka.model.User</class>
+		<class>pl.wmii.appka.model.entity.UzytkownikDAO</class>
+
+		<!-- Peryferia -->
+		<class>pl.wmii.appka.model.entity.peryferia.MyszkaDAO</class>
+
+		<!-- Podzespoly -->
+		<class>pl.wmii.appka.model.entity.podzespoly.ZasilaczDAO</class>
+
+		<!-- Classes -->
+
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-			<property name="javax.persistence.jdbc.url"
-				value="jdbc:mysql://localhost:3306/konfigurator" />
-			<property name="javax.persistence.jdbc.user" value="user" />
-			<property name="javax.persistence.jdbc.password" value="user" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/konfigurator"/>
+			<property name="javax.persistence.jdbc.user" value="user"/>
+			<property name="javax.persistence.jdbc.password" value="user"/>
 
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="hibernate.connection.shutdown" value="true"/>
+			<property name="hibernate.hbm2ddl" value="update" />
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.format_sql" value="false" />
 		</properties>
 	</persistence-unit>
 </persistence>
