@@ -23,7 +23,7 @@ public class ZestawyService {
 	private static final Logger logger = LoggerFactory.getLogger(ZestawyService.class);
 
 	@GET
-	@Path("podaj")
+	@Path("podajZestaw")
 	public Response podajUserow(@Context HttpServletRequest request) {
 
 

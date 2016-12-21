@@ -39,8 +39,21 @@
         <!-- Hibernate Annotations (and package-info.java)
         <mapping package="org.mypackage"/>
         -->
+
+        <!-- Mapowanie klas -->
         <mapping class="pl.wmii.appka.model.entity.UzytkownikDAO"/>
+
+        <!-- Mapowanie klas zestawu -->
+        <mapping class="pl.wmii.appka.model.entity.KomputerDAO" />
+        <mapping class="pl.wmii.appka.model.entity.ZestawKomputerowyDAO" />
+
+        <!-- Mapowanie peryferii -->
         <mapping class="pl.wmii.appka.model.entity.peryferia.MyszkaDAO"/>
+        <mapping class="pl.wmii.appka.model.entity.peryferia.KlawiaturaDAO"/>
+        <mapping class="pl.wmii.appka.model.entity.peryferia.MonitorDAO"/>
+
+        <!-- Mapownie podzespolow -->
+        <mapping class="pl.wmii.appka.model.entity.podzespoly.ZasilaczDAO"/>
 
     </session-factory>
 

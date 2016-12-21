@@ -10,12 +10,12 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "uzytkownik", schema = "konfigurator")
-public class UzytkownikDAO {
+public class UzytkownikDAO extends BaseEntity{
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
-  @Column(name = "id")
-  private Long id;
+//  @Id
+//  @GeneratedValue(strategy = GenerationType.AUTO)
+//  @Column(name = "id")
+//  private Long id;
 
   @Column(name = "login")
   private String login;

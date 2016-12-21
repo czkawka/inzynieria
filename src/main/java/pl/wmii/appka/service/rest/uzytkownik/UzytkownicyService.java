@@ -54,7 +54,7 @@ public class UzytkownicyService {
     logger.debug("Pobieram liste uzytkownikow");
 
     try {
-      Query query = entityManager.createQuery("",UzytkownikDAO.class);
+      Query query = entityManager.createQuery("select u from UzytkownikDAO u",UzytkownikDAO.class);
       uzytkownikDAOList = query.getResultList();
     } catch(Exception e) {
 
