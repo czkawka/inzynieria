@@ -1,12 +1,42 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:org.gwtbootstrap3.client.ui">
 	<ui:style>
-	.important {
+		.important {
 		font-weight: bold;
-	}
+		}
 	</ui:style>
 	<g:HTMLPanel>
-		<h1>Witam pało</h1>
+		<b:Container fluid="true">
+			<b:Form>
+				<b:Row>
+					<b:Column size="MD_6">
+						<b:FormGroup>
+							<b:FormLabel for="podzespol1">
+							    Podzespół 1
+							</b:FormLabel>
+							<b:ListBox b:id="podzespol1" ui:field="podzespol1">
+								<g:item>Msi Radeon Rx 480</g:item>
+								<g:item>DDR4</g:item>
+								<g:item>DDR5</g:item>
+							</b:ListBox>
+						</b:FormGroup>
+					</b:Column>
+
+					<b:Column size="MD_6">
+						<b:FormGroup>
+							<b:FormLabel for="podzespol1">
+							    Podzespół 2</b:FormLabel>
+							<b:ListBox b:id="podzespol1" ui:field="dddd">
+								<g:item>Gigabyte GeForce GTX 1060</g:item>
+								<g:item>DDR4</g:item>
+								<g:item>DDR5</g:item>
+							</b:ListBox>
+						</b:FormGroup>
+					</b:Column>
+				</b:Row>
+				<b:Button>Porównaj</b:Button>
+			</b:Form>
+		</b:Container>
 	</g:HTMLPanel>
 </ui:UiBinder> 

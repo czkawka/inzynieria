@@ -45,7 +45,7 @@ public class WyszukajKartaGraficznaView extends ViewWithUiHandlers<WyszukajKarta
 
 			@Override
 			public String getValue(KartaGraficznaDTO object) {
-				return notNull(object.getRodzajPamieci());
+				return notNull(object.getRodzinaProduktów());
 			}
 		};
 	}

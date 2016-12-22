@@ -5,6 +5,6 @@
 
     </ui:style>
     <g:HTMLPanel>
-        <h1>Panel Powitalny ;)</h1>
+        <h1>Ekran startowy</h1>
     </g:HTMLPanel>
 </ui:UiBinder>

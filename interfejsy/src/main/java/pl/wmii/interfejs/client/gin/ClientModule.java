@@ -2,7 +2,6 @@ package pl.wmii.interfejs.client.gin;
 
 
 
-import com.gwtplatform.dispatch.rest.client.gin.RestDispatchAsyncModule;
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 import com.gwtplatform.mvp.client.gin.DefaultModule;
 
@@ -16,9 +15,9 @@ public class ClientModule extends AbstractPresenterModule{
 	@Override
 	protected void configure() {
 		 install(new DefaultModule.Builder()
-	                .defaultPlace(NameTokens.FORM)
-	                .errorPlace(NameTokens.FORM)
-	                .unauthorizedPlace(NameTokens.FORM)
+	                .defaultPlace(NameTokens.HOME)
+	                .errorPlace(NameTokens.HOME)
+	                .unauthorizedPlace(NameTokens.HOME)
 	                .build());
 		//install(new RestDispatchAsyncModule());
 		install(new ApplicationModule());

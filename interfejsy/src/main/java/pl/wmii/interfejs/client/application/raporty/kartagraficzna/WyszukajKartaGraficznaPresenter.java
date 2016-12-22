@@ -51,12 +51,23 @@ public class WyszukajKartaGraficznaPresenter
 	@Override
 	protected void onReveal() {
 		super.onReveal();
-		
+		pobierzDane(dataProvider);
+		dataProvider.getList().add(new KartaGraficznaDTO());
+		dataProvider.getList().add(new KartaGraficznaDTO());
+		dataProvider.getList().add(new KartaGraficznaDTO());
+		dataProvider.getList().add(new KartaGraficznaDTO());
+		dataProvider.getList().add(new KartaGraficznaDTO());
+		dataProvider.getList().add(new KartaGraficznaDTO());
 		dataProvider.getList().add(new KartaGraficznaDTO());
 		dataProvider.getList().add(new KartaGraficznaDTO());
 		dataProvider.getList().add(new KartaGraficznaDTO());
 		dataProvider.getList().add(new KartaGraficznaDTO());
 		dataProvider.addDataDisplay(getView().podajCellTable());
+	}
+
+	private void pobierzDane(ListDataProvider<KartaGraficznaDTO> dataProvider2) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
