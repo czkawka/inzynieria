@@ -1,10 +1,28 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-             xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+             xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+             xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+             xmlns:b="urn:import:org.gwtbootstrap3.client.ui">
     <ui:style>
 
     </ui:style>
     <g:HTMLPanel>
-        <h1>Ekran startowy</h1>
+        <h1>Konfigurator Zestawów Komputerowych</h1>
+        <b:Container fluid="true" addStyleNames="home-cos">
+            <b:Row>
+                <b:Column size="MD_3" addStyleNames="version-info">
+                    <g:Label>Konfigurator zestawow komputerowych </g:Label>
+                    <g:Label>ver. 1.0.0.1</g:Label>
+                </b:Column>
+            </b:Row>
+            <b:Row>
+                <b:Column size="MD_3" addStyleNames="last-configurations">
+                    <g:VerticalPanel>
+                      <g:Label>Ostatnie zestawy/jednoski</g:Label>
+                      <c:CellList ui:field="zestawyLista"></c:CellList>
+                    </g:VerticalPanel>
+                </b:Column>
+            </b:Row>
+        </b:Container>
     </g:HTMLPanel>
 </ui:UiBinder>

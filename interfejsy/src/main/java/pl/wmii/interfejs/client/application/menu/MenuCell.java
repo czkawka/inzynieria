@@ -6,13 +6,13 @@ import com.google.gwt.safehtml.shared.SafeHtmlBuilder;
 /**
  * Created by Damian on 18.12.2016.
  */
-public class MenuCell extends AbstractCell<ElementMenu> {
+public class MenuCell extends AbstractCell<ElementMenuDane> {
 
   public MenuCell() {}
 
 
   @Override
-  public void render(Context context, ElementMenu elementMenu, SafeHtmlBuilder safeHtmlBuilder) {
+  public void render(Context context, ElementMenuDane elementMenu, SafeHtmlBuilder safeHtmlBuilder) {
     if ( elementMenu == null ) {
       return;
     }

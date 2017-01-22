@@ -9,61 +9,13 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "chlodzenieProcesora", schema = "konfigurator")
-public class ChlodzenieProcesoraDAO {
+public class ChlodzenieProcesoraDAO extends BazowyPodzespol {
 
   public ChlodzenieProcesoraDAO() {}
-
-  @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
-  private Long id;
 
   private String obslugiwaneGniazda;
   private String obslugiwaneProcesory;
   private String wymiary;
-  private String producent;
-  private String urlMiniaturki;
-  private String cechyDodatkowe;
-  private String typPodzespolu;
-
-  public Long getId() {
-    return id;
-  }
-
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-  public String getTypPodzespolu() {
-    return typPodzespolu;
-  }
-
-  public void setTypPodzespolu(String typPodzespolu) {
-    this.typPodzespolu = typPodzespolu;
-  }
-
-  public String getCechyDodatkowe() {
-    return cechyDodatkowe;
-  }
-
-  public void setCechyDodatkowe(String cechyDodatkowe) {
-    this.cechyDodatkowe = cechyDodatkowe;
-  }
-
-  public String getUrlMiniaturki() {
-    return urlMiniaturki;
-  }
-
-  public void setUrlMiniaturki(String urlMiniaturki) {
-    this.urlMiniaturki = urlMiniaturki;
-  }
-
-  public String getProducent() {
-    return producent;
-  }
-
-  public void setProducent(String producent) {
-    this.producent = producent;
-  }
 
   public String getWymiary() {
     return wymiary;

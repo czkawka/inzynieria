@@ -10,29 +10,16 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "myszka", schema = "konfigurator")
-public class MyszkaDAO {
+public class MyszkaDAO extends BazowePeryferia {
 
   public MyszkaDAO() {}
-
-  @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
-  private Long id;
 
   private String rodzaj;
   private int iloscPrzyciskow;
   private int iloscRolek;
   private String kolor;
   private int dpi;
-  private String urlMiniaturki;
   private String typPeryferi;
-
-  public Long getId() {
-    return id;
-  }
-
-  public void setId(Long id) {
-    this.id = id;
-  }
 
   public String getRodzaj() {
     return rodzaj;
@@ -72,14 +59,6 @@ public class MyszkaDAO {
 
   public void setDpi(int dpi) {
     this.dpi = dpi;
-  }
-
-  public String getUrlMiniaturki() {
-    return urlMiniaturki;
-  }
-
-  public void setUrlMiniaturki(String urlMiniaturki) {
-    this.urlMiniaturki = urlMiniaturki;
   }
 
   public String getTypPeryferi() {

@@ -1,6 +1,9 @@
 package pl.wmii.interfejs.client.application;
 
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
+
+import pl.wmii.interfejs.client.application.error.ErrorPresenter;
+import pl.wmii.interfejs.client.application.error.ErrorView;
 import pl.wmii.interfejs.client.application.formularze.FormularzPresenter;
 import pl.wmii.interfejs.client.application.formularze.FormularzView;
 import pl.wmii.interfejs.client.application.formularze.dodajzestaw.DodajZestawPresenter;
@@ -17,8 +20,6 @@ import pl.wmii.interfejs.client.application.naglowek.NaglowekPresenter;
 import pl.wmii.interfejs.client.application.naglowek.NaglowekView;
 import pl.wmii.interfejs.client.application.pomoc.PomocPresenter;
 import pl.wmii.interfejs.client.application.pomoc.PomocView;
-import pl.wmii.interfejs.client.application.raporty.kartagraficzna.WyszukajKartaGraficznaPresenter;
-import pl.wmii.interfejs.client.application.raporty.kartagraficzna.WyszukajKartaGraficznaView;
 
 public class ApplicationModule extends AbstractPresenterModule {
 
@@ -32,7 +33,7 @@ public class ApplicationModule extends AbstractPresenterModule {
 		bindPresenter(MenuPresenter.class, MenuPresenter.MyView.class, MenuView.class, MenuPresenter.Proxy.class);
 		bindPresenter(NaglowekPresenter.class, NaglowekPresenter.MyView.class, NaglowekView.class,
 				NaglowekPresenter.MyProxy.class);
-
+		bindPresenter(ErrorPresenter.class, ErrorPresenter.MyView.class, ErrorView.class, ErrorPresenter.MyProxy.class);
 		bindPresenter(HomePresenter.class, HomePresenter.MyView.class, HomeView.class, HomePresenter.MyProxy.class);
 		/*
 		 * FORMULARZE
@@ -47,12 +48,6 @@ public class ApplicationModule extends AbstractPresenterModule {
 		bindPresenter(ZarejestrujPresenter.class, ZarejestrujPresenter.MyView.class, ZarejestruView.class,
 				ZarejestrujPresenter.MyProxy.class);
 
-		/*
-		 * RAPORTY
-		 */
-
-		bindPresenter(WyszukajKartaGraficznaPresenter.class, WyszukajKartaGraficznaPresenter.MyView.class,
-				WyszukajKartaGraficznaView.class, WyszukajKartaGraficznaPresenter.MyProxy.class);
 	}
 
 }

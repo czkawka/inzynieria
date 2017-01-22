@@ -1,4 +1,4 @@
-package pl.wmii.interfejs.client.application.zestawy;
+package pl.wmii.interfejs.client.application.zestaw;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.dom.client.DivElement;

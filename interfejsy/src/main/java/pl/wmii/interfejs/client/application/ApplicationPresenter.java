@@ -13,6 +13,7 @@ import com.gwtplatform.mvp.client.proxy.Proxy;
 
 import pl.wmii.interfejs.client.application.menu.MenuPresenter;
 import pl.wmii.interfejs.client.application.naglowek.NaglowekPresenter;
+import pl.wmii.interfejs.client.application.utlis.logger.ApplicationLogger;
 
 public class ApplicationPresenter extends Presenter<ApplicationPresenter.MyView, ApplicationPresenter.MyProxy> implements ApplicationUiHandlers {
 	
@@ -54,6 +55,12 @@ public class ApplicationPresenter extends Presenter<ApplicationPresenter.MyView,
     	super.onBind();
     	setInSlot(SLOT_MENU, menuPresenter);
     	setInSlot(SLOT_HEADER, naglowekPresenter);
+    }
+    
+    @Override
+    protected void onReveal() {
+    	super.onReveal();
+    	ApplicationLogger.debug("Reveal application presenter");
     }
     
 }

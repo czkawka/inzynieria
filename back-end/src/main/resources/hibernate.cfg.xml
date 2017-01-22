@@ -54,6 +54,17 @@
 
         <!-- Mapownie podzespolow -->
         <mapping class="pl.wmii.appka.model.entity.podzespoly.ZasilaczDAO"/>
+        <mapping class="pl.wmii.appka.model.entity.podzespoly.ProcesorDAO"/>
+        <mapping class="pl.wmii.appka.model.entity.podzespoly.PlytaGlownaDAO"/>
+        <mapping class="pl.wmii.appka.model.entity.podzespoly.PamiecRamDAO"/>
+        <mapping class="pl.wmii.appka.model.entity.podzespoly.ObudowaDAO"/>
+        <mapping class="pl.wmii.appka.model.entity.podzespoly.NapedDAO"/>
+        <mapping class="pl.wmii.appka.model.entity.podzespoly.KartaSieciowaDAO"/>
+        <mapping class="pl.wmii.appka.model.entity.podzespoly.KartaGraficznaDAO"/>
+        <mapping class="pl.wmii.appka.model.entity.podzespoly.KartaDzwiekowaDAO"/>
+        <mapping class="pl.wmii.appka.model.entity.podzespoly.DyskTwardyDAO"/>
+        <mapping class="pl.wmii.appka.model.entity.podzespoly.ChlodzenieProcesoraDAO"/>
+
 
     </session-factory>
 

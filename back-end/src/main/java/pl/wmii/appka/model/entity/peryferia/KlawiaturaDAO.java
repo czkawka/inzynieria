@@ -9,28 +9,15 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "klawiatura", schema = "konfigurator")
-public class KlawiaturaDAO {
+public class KlawiaturaDAO extends BazowePeryferia {
 
   public KlawiaturaDAO() {}
-
-  @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
-  private Long id;
 
   private String zlacze;
   private int iloscKlawiszy;
   private String kolor;
   private String rodzaj;
-  private String urlMiniaturki;
   private String rodzajPeryferi;
-
-  public Long getId() {
-    return id;
-  }
-
-  public void setId(Long id) {
-    this.id = id;
-  }
 
   public String getZlacze() {
     return zlacze;
@@ -62,14 +49,6 @@ public class KlawiaturaDAO {
 
   public void setRodzajPeryferi(String rodzajPeryferi) {
     this.rodzajPeryferi = rodzajPeryferi;
-  }
-
-  public String getUrlMiniaturki() {
-    return urlMiniaturki;
-  }
-
-  public void setUrlMiniaturki(String urlMiniaturki) {
-    this.urlMiniaturki = urlMiniaturki;
   }
 
   public String getRodzaj() {

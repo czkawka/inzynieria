@@ -27,18 +27,18 @@ public class MenuPresenter extends Presenter<MenuPresenter.MyView, MenuPresenter
 
 	private static final GeneratorMenu menu = new GeneratorMenu();
 
-	private final ListDataProvider<ElementMenu> dataProvider = new ListDataProvider<>();
+	private final ListDataProvider<ElementMenuDane> dataProvider = new ListDataProvider<>();
 
 	@Override
-	public void onSelectMenuItem(ElementMenu elementMenu) {
+	public void onSelectMenuItem(ElementMenuDane elementMenu) {
 		PlaceRequest request = new PlaceRequest.Builder().nameToken(elementMenu.getPlace()).build();
 		placeManager.revealPlace(request);
 	}
 
 	public interface MyView extends View, HasUiHandlers<MenuUiHandlers> {
-		CellList<ElementMenu> podajCellListe();
+		CellList<ElementMenuDane> podajCellListe();
 		
-		SingleSelectionModel<ElementMenu> podajSelectionModel();
+		SingleSelectionModel<ElementMenuDane> podajSelectionModel();
 
 	}
 
@@ -70,7 +70,7 @@ public class MenuPresenter extends Presenter<MenuPresenter.MyView, MenuPresenter
 	}
 
 	protected void dodajMenuDoDataProvider() {
-		dataProvider.setList(menu.getPozycje());
+		dataProvider.setList(menu.podajListeElementow());
 		dataProvider.addDataDisplay(getView().podajCellListe());
 	}
 

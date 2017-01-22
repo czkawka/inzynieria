@@ -1,6 +1,12 @@
 @CHARSET "UTF-8";
 
-.topHeader {
-	border-bottom: 2px black solid;
-	margin-bottom: 15px;
+.home-logo { 
+	font-size:35pt;
+	color: black;
+	text-decoration: none;
+}
+
+.header-panel {
+	margin-bottom: 20px;
+	border-bottom: 1px black solid;
 }

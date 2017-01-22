@@ -16,7 +16,7 @@ public class ClientModule extends AbstractPresenterModule{
 	protected void configure() {
 		 install(new DefaultModule.Builder()
 	                .defaultPlace(NameTokens.HOME)
-	                .errorPlace(NameTokens.HOME)
+	                .errorPlace(NameTokens.ERROR_PLACE)
 	                .unauthorizedPlace(NameTokens.HOME)
 	                .build());
 		//install(new RestDispatchAsyncModule());

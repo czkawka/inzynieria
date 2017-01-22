@@ -10,13 +10,9 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "kartaGraficzna", schema = "konfigurator")
-public class KartaGraficznaDAO {
+public class KartaGraficznaDAO extends BazowyPodzespol {
 
   public KartaGraficznaDAO() {}
-
-  @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
-  private Long id;
 
   private String rodzinaProduktów;
   private String nazwa;
@@ -26,18 +22,6 @@ public class KartaGraficznaDAO {
   private String maxRozdzielczosc;
   private String zlacze;
   private String zlaczeZewnetrzne;
-  private String producent;
-  private String urlMiniaturki;
-  private String cechyDodatkowe;
-  private String typPodzespolu;
-
-  public Long getId() {
-    return id;
-  }
-
-  public void setId(Long id) {
-    this.id = id;
-  }
 
   public String getRodzinaProduktów() {
     return rodzinaProduktów;
@@ -101,38 +85,6 @@ public class KartaGraficznaDAO {
 
   public void setZlaczeZewnetrzne(String zlaczeZewnetrzne) {
     this.zlaczeZewnetrzne = zlaczeZewnetrzne;
-  }
-
-  public String getProducent() {
-    return producent;
-  }
-
-  public void setProducent(String producent) {
-    this.producent = producent;
-  }
-
-  public String getUrlMiniaturki() {
-    return urlMiniaturki;
-  }
-
-  public void setUrlMiniaturki(String urlMiniaturki) {
-    this.urlMiniaturki = urlMiniaturki;
-  }
-
-  public String getCechyDodatkowe() {
-    return cechyDodatkowe;
-  }
-
-  public void setCechyDodatkowe(String cechyDodatkowe) {
-    this.cechyDodatkowe = cechyDodatkowe;
-  }
-
-  public String getTypPodzespolu() {
-    return typPodzespolu;
-  }
-
-  public void setTypPodzespolu(String typPodzespolu) {
-    this.typPodzespolu = typPodzespolu;
   }
 
   public KartaGraficznaDTO podajDTO() {

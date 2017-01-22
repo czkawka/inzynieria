@@ -1,6 +1,7 @@
 package pl.wmii.appka.service.utils;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Created by Damian on 16.12.2016.
@@ -15,7 +16,7 @@ public class Walidacja {
     return object == null;
   }
 
-  public static Boolean czyPuste(List<?> lista) {
+  public static Boolean czyListaPusta(List<?> lista) {
     return (lista.size() == 0) || (lista == null);
   }
 

@@ -7,5 +7,5 @@ import com.gwtplatform.mvp.client.UiHandlers;
  */
 public interface MenuUiHandlers extends UiHandlers
 {
-  void onSelectMenuItem(ElementMenu elementMenu);
+  void onSelectMenuItem(ElementMenuDane elementMenu);
 }

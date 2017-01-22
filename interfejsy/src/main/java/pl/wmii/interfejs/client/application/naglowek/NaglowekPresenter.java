@@ -17,7 +17,7 @@ public class NaglowekPresenter extends Presenter<NaglowekPresenter.MyView, Naglo
 
 
   @ProxyStandard
-  @NameToken(NameTokens.Header)
+  @NameToken(NameTokens.HEADER)
   public interface MyProxy extends ProxyPlace<NaglowekPresenter> {
   }
 

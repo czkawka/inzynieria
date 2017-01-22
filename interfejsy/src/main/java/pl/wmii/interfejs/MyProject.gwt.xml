@@ -6,7 +6,11 @@
 	<inherits name="com.google.gwt.inject.Inject"/>
 	<inherits name="com.gwtplatform.dispatch.rest.DispatchRest"/>
 	<inherits name="org.gwtbootstrap3.GwtBootstrap3"/>
+    <inherits name="com.google.gwt.logging.Logging"/>
     <inherits name='com.gwtplatform.mvp.MvpWithEntryPoint'/>
+    <set-property name="gwt.logging.enabled" value="TRUE"/>
+    <set-property name="gwt.logging.consoleHandler" value="ENABLED"/>
+    <set-property name="gwt.logging.logLevel" value="INFO"/>
     
 
     <extend-configuration-property name="gin.ginjector.modules"

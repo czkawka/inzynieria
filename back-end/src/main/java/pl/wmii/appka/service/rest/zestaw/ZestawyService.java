@@ -2,14 +2,12 @@ package pl.wmii.appka.service.rest.zestaw;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import pl.wmii.appka.model.entity.ZestawKomputerowyDAO;
 import pl.wmii.appka.service.utils.EntityUtil;
 
 import javax.persistence.EntityManager;
 import javax.servlet.http.HttpServletRequest;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -23,12 +21,15 @@ public class ZestawyService {
 	private static final Logger logger = LoggerFactory.getLogger(ZestawyService.class);
 
 	@GET
-	@Path("podajZestaw")
-	public Response podajUserow(@Context HttpServletRequest request) {
-
-
+	@Path("zestaw/{id}")
+	public Response podajZestaw(@PathParam("id") Long id) {
 		return null;
 	}
 
+	@PUT
+	@Path("zestaw")
+	public Response zapiszZestaw(ZestawKomputerowyDAO zestaw) {
+		return null;
+	}
 
 }

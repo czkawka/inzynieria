@@ -5,9 +5,9 @@ import org.gwtbootstrap3.client.ui.constants.IconType;
 /**
  * Created by Damian on 18.12.2016.
  */
-public class ElementMenu {
+public class ElementMenuDane {
 
-  public ElementMenu(IconType icon, String place, String label, String description) {
+  public ElementMenuDane(IconType icon, String place, String label, String description) {
     this.icon = icon;
     this.place = place;
     this.description = description;

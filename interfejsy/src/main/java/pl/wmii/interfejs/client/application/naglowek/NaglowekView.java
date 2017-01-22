@@ -14,11 +14,9 @@ public class NaglowekView extends ViewWithUiHandlers<NaglowekUiHandlers> impleme
   interface Binder extends UiBinder<Widget, NaglowekView> {
   }
   
-  
-  
-
   @Inject
   NaglowekView(Binder uiBinder) {
     initWidget(uiBinder.createAndBindUi(this));
   }
+  
 }

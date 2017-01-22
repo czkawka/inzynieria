@@ -5,9 +5,10 @@ public class NameTokens {
 	/*
 	LAYOUT
 	 */
-	public static final String Header = "Header";
-	public static final String HOME = "home";
+	public static final String HOME = "home-content";
 	public static final String MAIN_MENU = "main_menu";
+	public static final String HEADER = "header-panel";
+	public static final String ERROR_PLACE = "error_presenter";
 
 	/*
 	* FORMULARZE
