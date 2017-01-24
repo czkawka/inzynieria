@@ -1,0 +1,79 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+  xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:org.gwtbootstrap3.client.ui"
+  xmlns:w="urn:import:pl.wmii.interfejs.client.application.utworz.jdenostkacentralna.widget">
+  <ui:style>
+
+  </ui:style>
+
+  <b:Container fluid="true">
+    <b:Row>
+      <b:Column size="MD_4">
+        <b:NavTabs>
+          <b:TabListItem active="true" dataTarget="#tab0"
+            text="Chłodzenie procesora" />
+          <b:TabListItem dataTarget="#tab1" text="Procesor" />
+          <b:TabListItem dataTarget="#tab2" text="Karta Graficzna" />
+          <b:TabListItem dataTarget="#tab3" text="Karta dźwiękowa" />
+          <b:TabListItem dataTarget="#tab4" text="Karta Sieciowa" />
+          <b:TabListItem dataTarget="#tab5" text="Nagrywarka" />
+          <b:TabListItem dataTarget="#tab6" text="Płyta główna" />
+          <b:TabListItem dataTarget="#tab7" text="Pamięć ram" />
+          <b:TabListItem dataTarget="#tab8" text="Dysk Twardy" />
+          <b:TabListItem dataTarget="#tab9" text="Zasilacz" />
+          <b:TabListItem dataTarget="#tab10" text="Obudowa" />
+        </b:NavTabs>
+        <b:TabContent>
+          <b:TabPane></b:TabPane>
+        </b:TabContent>
+      </b:Column>
+      <b:Column size="MD_8">
+        <b:Row>
+          <b:Column size="MD_3">
+            <w:PodzepolWidget></w:PodzepolWidget>
+          </b:Column>
+          <b:Column size="MD_3">
+            <w:PodzepolWidget></w:PodzepolWidget>
+          </b:Column>
+          <b:Column size="MD_3">
+            <w:PodzepolWidget></w:PodzepolWidget>
+          </b:Column>
+        </b:Row>
+
+        <b:Row>
+          <b:Column size="MD_3">
+            <w:PodzepolWidget></w:PodzepolWidget>
+          </b:Column>
+          <b:Column size="MD_3">
+            <w:PodzepolWidget></w:PodzepolWidget>
+          </b:Column>
+          <b:Column size="MD_3">
+            <w:PodzepolWidget></w:PodzepolWidget>
+          </b:Column>
+        </b:Row>
+
+        <b:Row>
+          <b:Column size="MD_3">
+            <w:PodzepolWidget></w:PodzepolWidget>
+          </b:Column>
+          <b:Column size="MD_3">
+            <w:PodzepolWidget></w:PodzepolWidget>
+          </b:Column>
+          <b:Column size="MD_3">
+            <w:PodzepolWidget></w:PodzepolWidget>
+          </b:Column>
+        </b:Row>
+
+        <b:Row>
+          <b:Column size="MD_3">
+            <w:PodzepolWidget></w:PodzepolWidget>
+          </b:Column>
+          <b:Column size="MD_3">
+            <w:PodzepolWidget></w:PodzepolWidget>
+          </b:Column>
+        </b:Row>
+
+      </b:Column>
+    </b:Row>
+  </b:Container>
+</ui:UiBinder>

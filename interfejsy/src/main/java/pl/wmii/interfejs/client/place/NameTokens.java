@@ -25,6 +25,9 @@ public class NameTokens {
 	 */
 	public static final String WYSZUKAJ_KARTY_GRAFICZNE ="wyszukajgrafiki";
 	public static final String ROOT = "root_presenter";
+	
+	
+	public static final String UTWORZ_PC = "utworz_pc_presenter";
 
 
 }
