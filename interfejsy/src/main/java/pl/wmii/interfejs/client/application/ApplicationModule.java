@@ -14,8 +14,6 @@ import pl.wmii.interfejs.client.application.formularze.zarejestrujsie.Zarejestru
 import pl.wmii.interfejs.client.application.formularze.zarejestrujsie.ZarejestrujPresenter;
 import pl.wmii.interfejs.client.application.home.HomePresenter;
 import pl.wmii.interfejs.client.application.home.HomeView;
-import pl.wmii.interfejs.client.application.menu.MenuPresenter;
-import pl.wmii.interfejs.client.application.menu.MenuView;
 import pl.wmii.interfejs.client.application.naglowek.NaglowekPresenter;
 import pl.wmii.interfejs.client.application.naglowek.NaglowekView;
 import pl.wmii.interfejs.client.application.pomoc.PomocPresenter;
@@ -30,7 +28,6 @@ public class ApplicationModule extends AbstractPresenterModule {
 		 */
 		bindPresenter(ApplicationPresenter.class, ApplicationPresenter.MyView.class, ApplicationView.class,
 				ApplicationPresenter.MyProxy.class);
-		bindPresenter(MenuPresenter.class, MenuPresenter.MyView.class, MenuView.class, MenuPresenter.Proxy.class);
 		bindPresenter(NaglowekPresenter.class, NaglowekPresenter.MyView.class, NaglowekView.class,
 				NaglowekPresenter.MyProxy.class);
 		bindPresenter(ErrorPresenter.class, ErrorPresenter.MyView.class, ErrorView.class, ErrorPresenter.MyProxy.class);

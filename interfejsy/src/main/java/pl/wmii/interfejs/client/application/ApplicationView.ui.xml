@@ -6,26 +6,16 @@
   </ui:style>
 
   <b:Container fluid="true">
-    <b:Row>
+    <b:Row width="100%">
       <b:Column size="MD_12" addStyleNames="header-panel">
-        <g:SimplePanel ui:field="header" width="100%"
-          height="75px"></g:SimplePanel>
+        <g:SimplePanel ui:field="header"
+          ></g:SimplePanel>
       </b:Column>
       <b:Row>
-        <b:Column size="MD_2">
+        <b:Column size="MD_12">
           <b:Panel>
             <b:PanelHeader>
-              <b:Heading size="H2" text="Menu" />
-            </b:PanelHeader>
-            <b:PanelBody>
-              <g:ScrollPanel ui:field="menu" width="100%" />
-            </b:PanelBody>
-          </b:Panel>
-        </b:Column>
-        <b:Column size="MD_10">
-          <b:Panel>
-            <b:PanelHeader>
-              <b:Heading size="H2" text="Content" />
+              <b:Heading size="H2" text="Konekst" ui:field="kontekstHeader"/>
             </b:PanelHeader>
             <b:PanelBody>
               <g:ScrollPanel ui:field="main">

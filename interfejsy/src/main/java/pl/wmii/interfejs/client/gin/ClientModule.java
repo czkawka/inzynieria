@@ -15,13 +15,11 @@ public class ClientModule extends AbstractPresenterModule{
 	@Override
 	protected void configure() {
 		 install(new DefaultModule.Builder()
-	                .defaultPlace(NameTokens.HOME)
+	                .defaultPlace(NameTokens.ROOT)
 	                .errorPlace(NameTokens.ERROR_PLACE)
-	                .unauthorizedPlace(NameTokens.HOME)
+	                .unauthorizedPlace(NameTokens.ERROR_PLACE)
 	                .build());
-		//install(new RestDispatchAsyncModule());
 		install(new ApplicationModule());
-		
 		install(new DispatchModule());
 	}
 

@@ -4,8 +4,7 @@
   <ui:style>
 
   </ui:style>
-  
   <g:HTMLPanel>
-      <h1>Ikona erlol</h1>
+      <b:Heading size="H1" text="error page" />
   </g:HTMLPanel>
 </ui:UiBinder>

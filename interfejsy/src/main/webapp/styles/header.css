@@ -8,5 +8,8 @@
 
 .header-panel {
 	margin-bottom: 20px;
-	border-bottom: 1px black solid;
+}
+
+.haeder-nav {
+	margin-bottom: 0 !important;
 }

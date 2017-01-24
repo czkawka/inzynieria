@@ -3,7 +3,7 @@ package pl.wmii.interfejs.client.application.utlis.logger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class ApplicationLogger {
+public class AppLogger {
 	
 	private static final Logger logger = Logger.getLogger("ApplicationLogger");
 			

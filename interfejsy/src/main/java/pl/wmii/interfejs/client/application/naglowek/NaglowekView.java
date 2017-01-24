@@ -19,4 +19,6 @@ public class NaglowekView extends ViewWithUiHandlers<NaglowekUiHandlers> impleme
     initWidget(uiBinder.createAndBindUi(this));
   }
   
+  
+  
 }

@@ -1,17 +1,43 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
   xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:org.gwtbootstrap3.client.ui">
-  
+
   <b:Container fluid="true">
     <b:Row>
-        <b:Column size="MD_12">
-            <b:Row>
-                <b:Column size="MD_3">
-                    <b:Anchor icon="HOME" addStyleNames="home-logo" href="#"/>
-                </b:Column>
-            </b:Row>
-        </b:Column>
+      <b:Column size="MD_12">
+        <b:Navbar addStyleNames="haeder-nav">
+          <b:NavbarHeader>
+            <b:NavbarBrand>
+              <i class="fa fa-home header-logo" />
+            </b:NavbarBrand>
+            <b:NavbarCollapseButton dataTarget="#navbar-collapse" />
+          </b:NavbarHeader>
+
+          <b:NavbarCollapse b:id="navbar-collapse">
+            <b:NavbarNav>
+              <b:ListDropDown>
+                <b:AnchorButton dataToggle="DROPDOWN">Utwórz</b:AnchorButton>
+                <b:DropDownMenu>
+                  <b:AnchorListItem>Jednostke centralną</b:AnchorListItem>
+                  <b:AnchorListItem>Zestaw komputerowy</b:AnchorListItem>
+                </b:DropDownMenu>
+              </b:ListDropDown>
+
+              <b:ListDropDown>
+                <b:AnchorButton dataToggle="DROPDOWN">Formularze</b:AnchorButton>
+                <b:DropDownMenu>
+                  <b:AnchorListItem>Dropdown 1</b:AnchorListItem>
+                  <b:AnchorListItem>Dropdown 2</b:AnchorListItem>
+                  <b:AnchorListItem>Dropdown 3</b:AnchorListItem>
+                </b:DropDownMenu>
+              </b:ListDropDown>
+              
+              <b:AnchorListItem>Pomoc</b:AnchorListItem>
+            </b:NavbarNav>
+          </b:NavbarCollapse>
+        </b:Navbar>
+      </b:Column>
     </b:Row>
   </b:Container>
-  
+
 </ui:UiBinder>

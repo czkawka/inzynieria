@@ -1,5 +1,7 @@
 package pl.wmii.interfejs.client.application;
 
+import org.gwtbootstrap3.client.ui.Heading;
+
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.ScrollPanel;
@@ -18,9 +20,6 @@ public class ApplicationView extends ViewWithUiHandlers<ApplicationUiHandlers> i
 
 	@UiField(provided = true)
 	public final ScrollPanel main = new ScrollPanel();
-
-	@UiField(provided = true)
-	public final ScrollPanel menu = new ScrollPanel();
 	
 	@Inject
 	ApplicationView(Binder uiBinder) {
@@ -28,10 +27,15 @@ public class ApplicationView extends ViewWithUiHandlers<ApplicationUiHandlers> i
 		initWidget(uiBinder.createAndBindUi(this));
 		
 		bindSlot(ApplicationPresenter.SLOT_MAIN, main);
-		bindSlot(ApplicationPresenter.SLOT_MENU, menu);
 		bindSlot(ApplicationPresenter.SLOT_HEADER, header);
 	}
+	
+	@UiField
+	Heading kontekstHeader;
 
-
-
+	@Override
+	public void ustawTytulKontekstu(String tytul) {
+		kontekstHeader.setText(tytul);
+	}
+	
 }
