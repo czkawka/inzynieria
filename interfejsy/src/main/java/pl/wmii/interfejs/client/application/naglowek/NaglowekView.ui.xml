@@ -7,7 +7,7 @@
       <b:Column size="MD_12">
         <b:Navbar addStyleNames="haeder-nav">
           <b:NavbarHeader>
-            <b:NavbarBrand>
+            <b:NavbarBrand ui:field="home">
               <i class="fa fa-home header-logo" />
             </b:NavbarBrand>
             <b:NavbarCollapseButton dataTarget="#navbar-collapse" />
@@ -18,8 +18,9 @@
               <b:ListDropDown>
                 <b:AnchorButton dataToggle="DROPDOWN">Utwórz</b:AnchorButton>
                 <b:DropDownMenu>
-                  <b:AnchorListItem>Jednostke centralną</b:AnchorListItem>
-                  <b:AnchorListItem>Zestaw komputerowy</b:AnchorListItem>
+                  <b:AnchorListItem ui:field="utworzPc">Jednostke
+                    centralną</b:AnchorListItem>
+                  <b:AnchorListItem ui:field="dodajZestawButton">Zestaw komputerowy</b:AnchorListItem>
                 </b:DropDownMenu>
               </b:ListDropDown>
 
@@ -31,8 +32,16 @@
                   <b:AnchorListItem>Dropdown 3</b:AnchorListItem>
                 </b:DropDownMenu>
               </b:ListDropDown>
+
+              <b:ListDropDown>
+                <b:AnchorButton dataToggle="DROPDOWN">Utwórz</b:AnchorButton>
+                <b:DropDownMenu>
+                  <b:AnchorListItem ui:field="porownajButton">Prównaj Podzespoly</b:AnchorListItem>
+                  <b:AnchorListItem ui:field="porownajZestawy">Prównaj Zestawy</b:AnchorListItem>
               
-              <b:AnchorListItem>Pomoc</b:AnchorListItem>
+                </b:DropDownMenu>
+              </b:ListDropDown>
+              <b:AnchorListItem ui:field="pomocButton">Pomoc</b:AnchorListItem>
             </b:NavbarNav>
           </b:NavbarCollapse>
         </b:Navbar>

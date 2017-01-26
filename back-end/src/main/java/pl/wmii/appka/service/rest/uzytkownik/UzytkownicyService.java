@@ -100,10 +100,10 @@ public class UzytkownicyService {
     return Response.ok().build();
   }
 
-  @GET
-  @Path("wyszukajuzytkownikow")
-  public Response wyszukajUzytkownikow(BazoweKryteria kryteria) {
-    return null;
-  }
+//  @GET
+//  @Path("wyszukajuzytkownikow")
+//  public Response wyszukajUzytkownikow(BazoweKryteria kryteria) {
+//    return null;
+//  }
 
 }

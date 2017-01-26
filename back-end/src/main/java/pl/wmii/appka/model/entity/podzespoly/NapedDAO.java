@@ -1,5 +1,7 @@
 package pl.wmii.appka.model.entity.podzespoly;
 
+import pl.wmii.appka.model.dto.NapedDTO;
+
 import javax.persistence.*;
 
 /**
@@ -28,4 +30,7 @@ public class NapedDAO extends BazowyPodzespol {
     this.rodzaj = rodzaj;
   }
 
+  public NapedDTO podajDTO() {
+    return null;
+  }
 }

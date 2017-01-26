@@ -16,7 +16,6 @@ public class ProcesorDAO extends BazowyPodzespol {
   private String kod;
   private int liczbaRdzeni;
   private int liczbaWatkow;
-  private String nazwa;
   private String obslugiwaneTechnologie;
   private String obslugaiwaneTypyRam;
   private Float taktowanie;
@@ -71,14 +70,6 @@ public class ProcesorDAO extends BazowyPodzespol {
     this.liczbaWatkow = liczbaWatkow;
   }
 
-  public String getNazwa() {
-    return nazwa;
-  }
-
-  public void setNazwa(String nazwa) {
-    this.nazwa = nazwa;
-  }
-
   public String getObslugiwaneTechnologie() {
     return obslugiwaneTechnologie;
   }
@@ -119,4 +110,7 @@ public class ProcesorDAO extends BazowyPodzespol {
     this.tdp = tdp;
   }
 
+  public ProcesorDAO podajDTO() {
+    return null;
+  }
 }

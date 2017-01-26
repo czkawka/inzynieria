@@ -42,6 +42,8 @@ public class ChlodzenieProcesoraDAO extends BazowyPodzespol {
   }
 
   public ChlodzenieProcesoraDTO podajDTO() {
-    return null;
+    ChlodzenieProcesoraDTO dto = new ChlodzenieProcesoraDTO();
+
+    return dto;
   }
 }

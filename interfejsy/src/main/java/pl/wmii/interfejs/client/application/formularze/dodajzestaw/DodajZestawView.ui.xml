@@ -1,11 +1,31 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
-	xmlns:g="urn:import:com.google.gwt.user.client.ui">
-	<ui:style>
-	.important {
-		font-weight: bold;
-	}
-	</ui:style>
-	<g:HTMLPanel>
-	</g:HTMLPanel>
+  xmlns:g="urn:import:com.google.gwt.user.client.ui"
+  xmlns:b="urn:import:org.gwtbootstrap3.client.ui" >
+  <ui:style>
+    .important {
+    font-weight: bold;
+    }
+  </ui:style>
+  <b:Container fluid="true">
+    <b:Row>
+      <b:Column size="MD_4">
+        <b:NavTabs ui:field="tabs">
+          <b:TabListItem ui:field="tab0" active="true"
+            dataTarget="#tab0" text="PC" />
+          <b:TabListItem ui:field="tab1" dataTarget="#tab1"
+            text="Klawiatury" />
+          <b:TabListItem ui:field="tab2" dataTarget="#tab2"
+            text="Myszki" />
+          <b:TabListItem ui:field="tab3" dataTarget="#tab3"
+            text="Monitory" />
+        </b:NavTabs>
+        <b:Row>
+          <b:Column size="MD_12" ui:field="listContainer" />
+        </b:Row>
+      </b:Column>
+      <b:Column size="MD_8">
+      </b:Column>
+    </b:Row>
+  </b:Container>
 </ui:UiBinder> 

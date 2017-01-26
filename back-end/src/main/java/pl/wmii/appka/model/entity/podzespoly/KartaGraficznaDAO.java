@@ -15,7 +15,6 @@ public class KartaGraficznaDAO extends BazowyPodzespol {
   public KartaGraficznaDAO() {}
 
   private String rodzinaProduktów;
-  private String nazwa;
   private int taktowanieRdzenia;
   private String rodzajPamieci;
   private int szynaPamieci;
@@ -29,14 +28,6 @@ public class KartaGraficznaDAO extends BazowyPodzespol {
 
   public void setRodzinaProduktów(String rodzinaProduktów) {
     this.rodzinaProduktów = rodzinaProduktów;
-  }
-
-  public String getNazwa() {
-    return nazwa;
-  }
-
-  public void setNazwa(String nazwa) {
-    this.nazwa = nazwa;
   }
 
   public int getTaktowanieRdzenia() {

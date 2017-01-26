@@ -1,5 +1,7 @@
 package pl.wmii.appka.model.entity.podzespoly;
 
+import pl.wmii.appka.model.dto.PlytaGlownaDTO;
+
 import javax.persistence.*;
 
 /**
@@ -11,5 +13,7 @@ import javax.persistence.*;
 public class PlytaGlownaDAO extends BazowyPodzespol {
 
 
-
+  public PlytaGlownaDTO podajDTO() {
+    return null;
+  }
 }

@@ -18,6 +18,8 @@ import pl.wmii.interfejs.client.application.naglowek.NaglowekPresenter;
 import pl.wmii.interfejs.client.application.naglowek.NaglowekView;
 import pl.wmii.interfejs.client.application.pomoc.PomocPresenter;
 import pl.wmii.interfejs.client.application.pomoc.PomocView;
+import pl.wmii.interfejs.client.application.porownywanie.PorowanjMainView;
+import pl.wmii.interfejs.client.application.porownywanie.PorownajMainPresenter;
 import pl.wmii.interfejs.client.application.utworz.jdenostkacentralna.UtworzPcPresneter;
 import pl.wmii.interfejs.client.application.utworz.jdenostkacentralna.UtworzPcView;
 
@@ -48,6 +50,7 @@ public class ApplicationModule extends AbstractPresenterModule {
 				ZarejestrujPresenter.MyProxy.class);
 		
 		bindPresenter(UtworzPcPresneter.class, UtworzPcPresneter.MyView.class, UtworzPcView.class, UtworzPcPresneter.MyProxy.class);
+		bindPresenter(PorownajMainPresenter.class, PorownajMainPresenter.MyView.class, PorowanjMainView.class, PorownajMainPresenter.MyProxy.class);
 
 	}
 

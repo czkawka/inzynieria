@@ -25,7 +25,10 @@ public class NaglowekPresenter extends Presenter<NaglowekPresenter.MyView, Naglo
 	}
 
 	@Inject
-	NaglowekPresenter(EventBus eventBus, MyView view, MyProxy proxy) {
+	NaglowekPresenter(
+			EventBus eventBus,
+			MyView view,
+			MyProxy proxy) {
 		super(eventBus, view, proxy);
 		getView().setUiHandlers(this);
 	}
@@ -33,7 +36,31 @@ public class NaglowekPresenter extends Presenter<NaglowekPresenter.MyView, Naglo
 	@Override
 	protected void onReveal() {
 		super.onReveal();
+	}
+
+	@Override
+	public void onUtworzPc() {
+		fireEvent(new AppEvent(new Kontekst(Konteksty.KONTEKST_UTWORZ_PC)));
+	}
+
+	@Override
+	public void onGoToHome() {
 		fireEvent(new AppEvent(new Kontekst(Konteksty.KONTEKST_STRONA_DOMOWA)));
+	}
+
+	@Override
+	public void onGoToPomoc() {
+		fireEvent(new AppEvent(new Kontekst(Konteksty.KONTEKST_POMOC)));
+	}
+
+	@Override
+	public void onUtworzZestaw() {
+		fireEvent(new AppEvent(new Kontekst(Konteksty.KONTEKST_UTWORZ_ZESTAW)));
+	}
+
+	@Override
+	public void onPorownaj() {
+		fireEvent(new AppEvent(new Kontekst(Konteksty.KONTEKST_POROWNAJ_MAIN)));
 	}
 
 }

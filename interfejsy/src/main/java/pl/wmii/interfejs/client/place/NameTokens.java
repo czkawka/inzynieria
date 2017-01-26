@@ -28,6 +28,6 @@ public class NameTokens {
 	
 	
 	public static final String UTWORZ_PC = "utworz_pc_presenter";
-
-
+	
+	public static final String POROWANJ_ZESTAWY_MAIN = "porowanj_main";
 }

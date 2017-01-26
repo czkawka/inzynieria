@@ -17,6 +17,7 @@ public abstract class BazowyPodzespol extends BaseEntity {
   private String typPodzespolu;
   private String cechyDodatkowe;
   private String urlMiniaturki;
+  private String nazwa;
 
   public String getCechyDodatkowe() {
     return cechyDodatkowe;
@@ -48,5 +49,14 @@ public abstract class BazowyPodzespol extends BaseEntity {
 
   public void setUrlMiniaturki(String urlMiniaturki) {
     this.urlMiniaturki = urlMiniaturki;
+  }
+
+
+  public String getNazwa() {
+    return nazwa;
+  }
+
+  public void setNazwa(String nazwa) {
+    this.nazwa = nazwa;
   }
 }

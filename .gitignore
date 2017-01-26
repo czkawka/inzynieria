@@ -11,3 +11,5 @@ interfejsy/src/main/webapp/gwt-unitCache
 interfejsy/src/main/webapp/WEB-INF/deploy
 back-end/.setting*
 interfejsy/.settings
+back-end/src/main/webapp/gwt-unitCache/gwt-unitCache*
+back-end/src/main/webapp/interfejs*

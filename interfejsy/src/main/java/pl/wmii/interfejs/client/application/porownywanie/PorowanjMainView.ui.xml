@@ -1,0 +1,46 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+  xmlns:b="urn:import:org.gwtbootstrap3.client.ui"
+  xmlns:g="urn:import:com.google.gwt.user.client.ui">
+  <ui:style>
+  
+  </ui:style>
+  <b:Container fluid="true">
+      <b:Row>
+          <b:Column size="MD_2" addStyleNames="porowanj-main" >
+              <b:Button>Karty graficzne</b:Button>
+          </b:Column>
+          <b:Column size="MD_2" addStyleNames="porowanj-main" >
+              <b:Button>Chłodzenia procesora</b:Button>
+          </b:Column>
+          <b:Column size="MD_2" addStyleNames="porowanj-main" >
+              <b:Button>Dyski Twarde</b:Button>
+          </b:Column>
+          <b:Column size="MD_2" addStyleNames="porowanj-main" >
+              <b:Button>Karty Dźwiękowe</b:Button>
+          </b:Column>
+          <b:Column size="MD_2" addStyleNames="porowanj-main" >
+              <b:Button>Karty sieciowe</b:Button>
+          </b:Column>
+          <b:Column size="MD_2" addStyleNames="porowanj-main" >
+              <b:Button>Napędy optyczne</b:Button>
+          </b:Column>
+          <b:Column size="MD_2" addStyleNames="porowanj-main" >
+              <b:Button>Obudowy</b:Button>
+          </b:Column>
+          <b:Column size="MD_2" addStyleNames="porowanj-main" >
+              <b:Button>Pamięci RAM</b:Button>
+          </b:Column>
+          <b:Column size="MD_2" addStyleNames="porowanj-main" >
+              <b:Button>Płyty głowne</b:Button>
+          </b:Column>
+          <b:Column size="MD_2" addStyleNames="porowanj-main" >
+              <b:Button>Procesory</b:Button>
+          </b:Column>
+          <b:Column size="MD_2" addStyleNames="porowanj-main" >
+              <b:Button>Zasilacze</b:Button>
+          </b:Column>
+          
+      </b:Row>
+  </b:Container>
+</ui:UiBinder> 

@@ -1,7 +1,11 @@
 package pl.wmii.interfejs.client.application;
 
+import com.google.gwt.http.client.Response;
+import com.google.gwt.user.client.Window;
 import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;
+import com.gwtplatform.dispatch.rest.client.RestCallback;
+import com.gwtplatform.dispatch.rest.client.RestDispatch;
 import com.gwtplatform.mvp.client.HasUiHandlers;
 import com.gwtplatform.mvp.client.Presenter;
 import com.gwtplatform.mvp.client.View;
@@ -19,6 +23,7 @@ import pl.wmii.interfejs.client.application.naglowek.NaglowekPresenter;
 import pl.wmii.interfejs.client.application.utlis.events.zmienkontekst.AppEvent;
 import pl.wmii.interfejs.client.application.utlis.logger.AppLogger;
 import pl.wmii.interfejs.client.place.NameTokens;
+import pl.wmii.interfejs.client.rest.DaneService;
 
 public class ApplicationPresenter extends Presenter<ApplicationPresenter.MyView, ApplicationPresenter.MyProxy> implements ApplicationUiHandlers {
 	
@@ -37,6 +42,8 @@ public class ApplicationPresenter extends Presenter<ApplicationPresenter.MyView,
     public static final PermanentSlot<NaglowekPresenter> SLOT_HEADER = new PermanentSlot<>();
     
     NaglowekPresenter naglowekPresenter;
+    RestDispatch dispatcher;
+    DaneService daneSerwis;
 
     @Inject
     ApplicationPresenter(
@@ -44,9 +51,12 @@ public class ApplicationPresenter extends Presenter<ApplicationPresenter.MyView,
             MyView view,
             MyProxy proxy,
             PlaceManager placeManager,
+            RestDispatch dispatcher,
+            DaneService daneSerwis,
             NaglowekPresenter naglowekPresenter) {
         super(eventBus, view, proxy, RevealType.Root);
-        
+        this.dispatcher = dispatcher;
+        this.daneSerwis = daneSerwis;
         this.naglowekPresenter = naglowekPresenter;
         this.placeManager = placeManager;
         
@@ -61,8 +71,9 @@ public class ApplicationPresenter extends Presenter<ApplicationPresenter.MyView,
 			
 			@Override
 			public void onUstawKonetkst(AppEvent event) {
-				AppLogger.debug("Gitara siema eventy" + event.getDane().getKontekst().getNameToken());
-				
+				AppLogger.debug("onUstawKonetkst " + event.getDane().getKontekst().getNameToken());
+				ustawPresenterNaSlot(event.getDane().getKontekst().getNameToken().toString());
+				getView().ustawTytulKontekstu(event.getDane().getKontekst().getTytulKontekstu().toString());
 			}
 		});
     	
@@ -70,10 +81,37 @@ public class ApplicationPresenter extends Presenter<ApplicationPresenter.MyView,
     }
     
     @Override
+    protected void onReveal() {
+    	super.onReveal();
+    	//testujPolaczenieDoServera();
+    }
+    
+    private void testujPolaczenieDoServera() {
+    	dispatcher.execute(daneSerwis.connectionTest(), new RestCallback<String>() {
+
+			@Override
+			public void onFailure(Throwable caught) {
+				AppLogger.error("Nie udalo sie polaczyc do servera");
+			}
+			
+			@Override
+			public void onSuccess(String result) {
+				AppLogger.debug("Udalo sie polaczyc do servera" + result);
+			}
+
+			@Override
+			public void setResponse(Response response) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+	}
+
+	@Override
     public void prepareFromRequest(PlaceRequest request) {
     	super.prepareFromRequest(request);
     	if(czyTokenRootOrazBrakParametrow(request)) {
-    		ustawPresenterNaSlot(NameTokens.HOME);
+    		ustawPresenterNaSlot(NameTokens.UTWORZ_PC);
     		getView().ustawTytulKontekstu("Home");
     	}
     }

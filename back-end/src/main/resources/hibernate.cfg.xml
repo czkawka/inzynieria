@@ -44,8 +44,8 @@
         <mapping class="pl.wmii.appka.model.entity.UzytkownikDAO"/>
 
         <!-- Mapowanie klas zestawu -->
-        <mapping class="pl.wmii.appka.model.entity.KomputerDAO" />
-        <mapping class="pl.wmii.appka.model.entity.ZestawKomputerowyDAO" />
+        <!--<mapping class="pl.wmii.appka.model.entity.KomputerDAO" />-->
+        <!--<mapping class="pl.wmii.appka.model.entity.ZestawKomputerowyDAO" />-->
 
         <!-- Mapowanie peryferii -->
         <mapping class="pl.wmii.appka.model.entity.peryferia.MyszkaDAO"/>

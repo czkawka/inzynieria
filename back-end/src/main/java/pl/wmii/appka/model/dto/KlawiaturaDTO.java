@@ -5,5 +5,5 @@ import java.io.Serializable;
 /**
  * Created by Damian on 14.12.2016.
  */
-public class KlawiaturaDTO extends BaseDTO {
+public class KlawiaturaDTO extends BazowyPodzespolDTO {
 }

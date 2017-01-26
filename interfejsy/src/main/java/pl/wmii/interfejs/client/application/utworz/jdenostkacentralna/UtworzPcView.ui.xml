@@ -1,7 +1,8 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
   xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:b="urn:import:org.gwtbootstrap3.client.ui"
-  xmlns:w="urn:import:pl.wmii.interfejs.client.application.utworz.jdenostkacentralna.widget">
+  xmlns:w="urn:import:pl.wmii.interfejs.client.application.utworz.jdenostkacentralna.widget.wybieracz"
+  xmlns:c="urn:import:pl.wmii.interfejs.client.application.utworz.jdenostkacentralna.widget">
   <ui:style>
 
   </ui:style>
@@ -9,70 +10,46 @@
   <b:Container fluid="true">
     <b:Row>
       <b:Column size="MD_4">
-        <b:NavTabs>
-          <b:TabListItem active="true" dataTarget="#tab0"
-            text="Chłodzenie procesora" />
-          <b:TabListItem dataTarget="#tab1" text="Procesor" />
-          <b:TabListItem dataTarget="#tab2" text="Karta Graficzna" />
-          <b:TabListItem dataTarget="#tab3" text="Karta dźwiękowa" />
-          <b:TabListItem dataTarget="#tab4" text="Karta Sieciowa" />
-          <b:TabListItem dataTarget="#tab5" text="Nagrywarka" />
-          <b:TabListItem dataTarget="#tab6" text="Płyta główna" />
-          <b:TabListItem dataTarget="#tab7" text="Pamięć ram" />
-          <b:TabListItem dataTarget="#tab8" text="Dysk Twardy" />
-          <b:TabListItem dataTarget="#tab9" text="Zasilacz" />
-          <b:TabListItem dataTarget="#tab10" text="Obudowa" />
+        <b:NavTabs ui:field="tabs">
+          <b:TabListItem ui:field="tab0" active="true"
+            dataTarget="#tab0" text="Chłodzenie procesora" />
+          <b:TabListItem ui:field="tab1" dataTarget="#tab1"
+            text="Procesor" />
+          <b:TabListItem ui:field="tab2" dataTarget="#tab2"
+            text="Karta Graficzna" />
+          <b:TabListItem ui:field="tab3" dataTarget="#tab3"
+            text="Karta dźwiękowa" />
+          <b:TabListItem ui:field="tab4" dataTarget="#tab4"
+            text="Karta Sieciowa" />
+          <b:TabListItem ui:field="tab5" dataTarget="#tab5"
+            text="Nagrywarka" />
+          <b:TabListItem ui:field="tab6" dataTarget="#tab6"
+            text="Płyta główna" />
+          <b:TabListItem ui:field="tab7" dataTarget="#tab7"
+            text="Pamięć ram" />
+          <b:TabListItem ui:field="tab8" dataTarget="#tab8"
+            text="Dysk Twardy" />
+          <b:TabListItem ui:field="tab9" dataTarget="#tab9"
+            text="Zasilacz" />
+          <b:TabListItem ui:field="tab10" dataTarget="#tab10"
+            text="Obudowa" />
         </b:NavTabs>
-        <b:TabContent>
-          <b:TabPane></b:TabPane>
-        </b:TabContent>
+        <b:Row>
+          <b:Column size="MD_12" ui:field="listContainer" />
+        </b:Row>
       </b:Column>
       <b:Column size="MD_8">
-        <b:Row>
-          <b:Column size="MD_3">
-            <w:PodzepolWidget></w:PodzepolWidget>
-          </b:Column>
-          <b:Column size="MD_3">
-            <w:PodzepolWidget></w:PodzepolWidget>
-          </b:Column>
-          <b:Column size="MD_3">
-            <w:PodzepolWidget></w:PodzepolWidget>
-          </b:Column>
-        </b:Row>
-
-        <b:Row>
-          <b:Column size="MD_3">
-            <w:PodzepolWidget></w:PodzepolWidget>
-          </b:Column>
-          <b:Column size="MD_3">
-            <w:PodzepolWidget></w:PodzepolWidget>
-          </b:Column>
-          <b:Column size="MD_3">
-            <w:PodzepolWidget></w:PodzepolWidget>
-          </b:Column>
-        </b:Row>
-
-        <b:Row>
-          <b:Column size="MD_3">
-            <w:PodzepolWidget></w:PodzepolWidget>
-          </b:Column>
-          <b:Column size="MD_3">
-            <w:PodzepolWidget></w:PodzepolWidget>
-          </b:Column>
-          <b:Column size="MD_3">
-            <w:PodzepolWidget></w:PodzepolWidget>
-          </b:Column>
-        </b:Row>
-
-        <b:Row>
-          <b:Column size="MD_3">
-            <w:PodzepolWidget></w:PodzepolWidget>
-          </b:Column>
-          <b:Column size="MD_3">
-            <w:PodzepolWidget></w:PodzepolWidget>
-          </b:Column>
-        </b:Row>
-
+          <c:PodzepolWidget ui:field="wybraneChlodzenia" caption="Chlodzenie procesora"/>
+          <c:PodzepolWidget ui:field="wybraneProcesory" caption="Procesor"/>
+          <c:PodzepolWidget ui:field="wybraneGpu" caption="Karta graficzna"/>
+          <c:PodzepolWidget ui:field="wybraneDzwiekowe" caption="Karta dzwiekowa"/>
+          <c:PodzepolWidget ui:field="wybraneSieciowe" caption="Karta sieciowa"/>
+          <c:PodzepolWidget ui:field="wybraneNapedy" caption="Nagrywarka"/>
+          <c:PodzepolWidget ui:field="wybraneGlowne" caption="Płyta główna"/>
+          <c:PodzepolWidget ui:field="wybraneRam" caption="Pamięć ram"/>
+          <c:PodzepolWidget ui:field="wybraneTwarde" caption="Dysk Twardy"/>
+          <c:PodzepolWidget ui:field="wybraneZasilacze" caption="Zasilacz"/>
+          <c:PodzepolWidget ui:field="wybraneobudowy" caption="Obudowa"/>
       </b:Column>
     </b:Row>
   </b:Container>

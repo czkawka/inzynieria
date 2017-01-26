@@ -1,5 +1,7 @@
 package pl.wmii.appka.model.entity.podzespoly;
 
+import pl.wmii.appka.model.dto.ObudowaDTO;
+
 import javax.persistence.*;
 
 /**
@@ -90,5 +92,9 @@ public class ObudowaDAO extends BazowyPodzespol {
 
   public void setZlacza(String zlacza) {
     this.zlacza = zlacza;
+  }
+
+  public ObudowaDTO podajDTO() {
+    return null;
   }
 }

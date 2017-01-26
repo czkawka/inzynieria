@@ -2,7 +2,7 @@ package pl.wmii.interfejs.client.application.utworz.jdenostkacentralna.widget;
 
 public interface Podzespol {
 	
-	String getId();
+	Long getId();
 	String getNazwa();
 	String getOpis();
 	String getObrazekUrl();
